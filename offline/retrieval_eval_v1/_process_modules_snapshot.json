@@ -1,0 +1,10 @@
+{
+  "snapshot": {
+    "modules.milvus_store": false,
+    "modules.database": false,
+    "modules.cache": false,
+    "modules.rerank": false,
+    "modules.rag.hybrid_rrf": false,
+    "pymilvus": false
+  }
+}

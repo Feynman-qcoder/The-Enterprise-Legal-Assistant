@@ -1,0 +1,35 @@
+{
+  "total": 100,
+  "contract_fact": 50,
+  "legal_clause": 50,
+  "dimension_distribution": {
+    "contract_amount": 6,
+    "party_info": 5,
+    "sign_dates": 6,
+    "breach_terms": 5,
+    "tax_rate": 5,
+    "auto_renewal": 5,
+    "payment_terms": 4,
+    "governing_law": 5,
+    "termination_notice": 4,
+    "product_qty": 5
+  },
+  "law_distribution": {
+    "LAW_008": 9,
+    "LAW_009": 3,
+    "LAW_010": 2,
+    "LAW_007": 16,
+    "LAW_004": 1,
+    "LAW_005": 1,
+    "LAW_006": 1,
+    "LAW_001": 13,
+    "LAW_002": 2,
+    "LAW_003": 1,
+    "DATA_002": 1
+  },
+  "difficulty_distribution": {
+    "easy": 30,
+    "hard": 15,
+    "medium": 55
+  }
+}

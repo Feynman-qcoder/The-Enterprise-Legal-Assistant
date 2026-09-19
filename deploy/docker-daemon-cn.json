@@ -1,0 +1,9 @@
+{
+  "registry-mirrors": [
+    "https://docker.m.daocloud.io",
+    "https://docker.1ms.run",
+    "https://docker.xuanyuan.me"
+  ],
+  "dns": ["223.5.5.5", "114.114.114.114", "8.8.8.8"],
+  "max-concurrent-downloads": 3
+}

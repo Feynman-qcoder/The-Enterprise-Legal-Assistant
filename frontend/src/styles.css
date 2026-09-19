@@ -1,0 +1,34 @@
+/* 全局 CSS 变量：暗色背景、强调色、对话气泡配色；由 App.vue 未 scoped 部分间接继承页面底色 */
+
+:root {
+  color-scheme: dark;
+  --bg0: #0b1020;
+  --bg1: #121a32;
+  --accent: #5eead4;
+  --accent2: #818cf8;
+  --text: #e8eefc;
+  --muted: #94a3c8;
+  --bubble-user: rgba(94, 234, 212, 0.12);
+  --bubble-bot: rgba(129, 140, 248, 0.14);
+  --radius: 18px;
+  font-family: "Noto Sans SC", "DM Sans", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(94, 234, 212, 0.15), transparent),
+    radial-gradient(900px 500px at 90% 0%, rgba(129, 140, 248, 0.2), transparent),
+    linear-gradient(160deg, var(--bg0), var(--bg1));
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}

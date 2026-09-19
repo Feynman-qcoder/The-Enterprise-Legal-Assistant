@@ -1,0 +1,34 @@
+# =============================================================================
+# Backend 镜像（Task 21 Part 4）：FastAPI + BGE 模型（模型 volume 挂载，不进镜像）。
+# -----------------------------------------------------------------------------
+# 构建（仓库根为 context）：docker compose --profile app up -d --build
+# 红线：models/ 权重与 .env 绝不 COPY 进镜像（分别 volume / env_file 注入）。
+# GPU 变体：build arg TORCH_INDEX 指向 cu121 wheel（见 compose 的 backend-gpu 服务）。
+# =============================================================================
+
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+# torch 先装（独立 layer 便于缓存）；默认 CPU wheel 控制镜像体积
+ARG TORCH_INDEX=https://download.pytorch.org/whl/cpu
+RUN pip install torch --index-url ${TORCH_INDEX}
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# 应用源码（backend/modules + 在线 manifest 所需的 frozen_assets）
+COPY backend ./backend
+COPY modules ./modules
+COPY frozen_assets ./frozen_assets
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=90s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4)" || exit 1
+
+CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "8000"]

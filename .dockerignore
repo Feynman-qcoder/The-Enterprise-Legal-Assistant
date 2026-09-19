@@ -1,0 +1,26 @@
+# Backend 镜像构建上下文排除清单（仓库根为 context）：
+# models(5GB)/.env/.git 等绝不进入镜像或构建上下文（红线）
+.git
+.env
+.env.*
+models
+frontend
+deploy
+data_corpus
+tests
+docs
+offline
+scripts
+__pycache__
+**/__pycache__
+*.pyc
+*.log
+logs
+.idea
+.pytest_cache
+.pytest_tmp
+.codex_tmp_*
+adjudication_output
+cleaner_v1_1_*
+*.md
+uv.lock

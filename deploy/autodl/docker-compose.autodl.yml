@@ -1,0 +1,64 @@
+# =============================================================================
+# AutoDL 叠加式 Compose（本质是「补丁」，不修改 deploy/docker-compose.yml）
+# -----------------------------------------------------------------------------
+# 用法（在 deploy/ 目录下执行）：
+#     docker compose \
+#       -f docker-compose.yml \
+#       -f autodl/docker-compose.autodl.yml \
+#       up -d
+#
+# 本文件只做两件「补齐」的事，基座里已有的服务一律不重新定义：
+#   1) 补上基座缺失的 MySQL 服务
+#      —— 原方案依赖宿主「小皮 MySQL」（host.docker.internal），AutoDL 上没有
+#   2) 纠正应用层的连库地址
+#      —— 容器内应连 Compose 服务名 mysql，而不是 host.docker.internal
+#         （若你选择「后端原生跑在宿主」，则 .env 里的 MYSQL_HOST=127.0.0.1 生效，
+#           本补丁对后台无影响）
+#
+# 注意：Compose 的相对路径按「声明它的那个 compose 文件所在目录」解析，
+#       本文件在 deploy/autodl/ 下，故引用仓库根需用 ../../
+# =============================================================================
+
+services:
+  mysql:
+    # 与基座同策略：用 DaoCloud 同步镜像，规避 registry-1.docker.io 拉取 EOF
+    image: docker.m.daocloud.io/library/mysql:8.0
+    container_name: xiaoyi-mysql
+    command:
+      # 用 native_password：aiomysql/PyMySQL 连 caching_sha2 需额外装 cryptography。
+      # 若你换用 MySQL 8.4+ 镜像（该参数已被移除），请删掉此行并执行
+      #   pip install cryptography
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_change_me}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-xiaoyi_rag}
+      MYSQL_USER: ${MYSQL_USER:-xiaoyi}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?请在 .env 中设置 MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      # 首次初始化自动建库（脚本内是 CREATE DATABASE IF NOT EXISTS，幂等；
+      # 业务表由 FastAPI lifespan 的 create_all 负责，不在此处建）
+      - ../../scripts/init_mysql.sql:/docker-entrypoint-initdb.d/10_init_mysql.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 40s
+    restart: unless-stopped
+
+  # 走容器跑应用时，连库地址必须是服务名（覆盖基座的 host.docker.internal）
+  backend:
+    environment:
+      MYSQL_HOST: mysql
+
+  backend-gpu:
+    environment:
+      MYSQL_HOST: mysql
+
+volumes:
+  mysql-data:

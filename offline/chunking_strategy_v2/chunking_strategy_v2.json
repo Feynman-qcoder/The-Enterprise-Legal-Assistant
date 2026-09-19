@@ -1,0 +1,120 @@
+{
+  "run_summary": {
+    "STARTED_AT": "2026-08-21T02:09:54.107991+00:00",
+    "FINISHED_AT": "2026-08-21T02:10:49.566607+00:00",
+    "ELAPSED_SEC": 55.459,
+    "MANIFEST_ENTRIES": 53,
+    "DOCS_LOADED_OK": 49,
+    "DOCS_SKIPPED": 4,
+    "SKIPPED_LIST": [
+      {
+        "logical_document_id": "CONTRACT_006",
+        "reason": "PARSE_ERROR_ContractViolation_HEADING level must be in 1..9, got 10"
+      },
+      {
+        "logical_document_id": "CONTRACT_007",
+        "reason": "PARSE_ERROR_ContractViolation_HEADING level must be in 1..9, got 10"
+      },
+      {
+        "logical_document_id": "CONTRACT_008",
+        "reason": "PARSE_ERROR_ContractViolation_HEADING level must be in 1..9, got 10"
+      },
+      {
+        "logical_document_id": "CONTRACT_009",
+        "reason": "PARSE_ERROR_ContractViolation_HEADING level must be in 1..9, got 10"
+      }
+    ],
+    "FR7_FROZEN_THRESHOLDS": {
+      "OVERSIZED_THRESHOLD_CHARS": 1200,
+      "VERY_SMALL_THRESHOLD_CHARS": 64,
+      "A_WINDOW": 512,
+      "A_OVERLAP": 128,
+      "A_STEP": 384,
+      "B_TARGET_MAX_CHARS": 600,
+      "B_HARD_MAX": 900,
+      "TABLE_SMALL_ROWS": 20,
+      "TABLE_SMALL_CHARS": 800,
+      "TABLE_SPLIT_GROUP_ROWS": 10
+    },
+    "BGE_TOKENIZER_AVAILABLE": true,
+    "PARENT_CHILD_PROBE": "PASS",
+    "FAILURES": [],
+    "CHUNKING_STRATEGY_V2_OFFLINE": "PASS",
+    "OFFLINE_PREFERRED_STRATEGY": "B",
+    "READY_FOR_RETRIEVAL_AB_EVAL": "YES"
+  },
+  "gate": {
+    "STATUS": "PASS",
+    "TRIPLET": {
+      "CHUNKING_STRATEGY_V2_OFFLINE": "PASS",
+      "OFFLINE_PREFERRED_STRATEGY": "B",
+      "READY_FOR_RETRIEVAL_AB_EVAL": "YES"
+    },
+    "CRITERIA": {
+      "GATE_ALL_TESTS": true,
+      "B_STRUCTURAL_SAFE": true,
+      "B_WINS_CROSS_ARTICLE": true,
+      "B_WINS_CROSS_SECTION": true,
+      "B_TABLE_RELATIONSHIP_LOSS_ZERO": true,
+      "CMCV1_CLEAN": true,
+      "PROVENANCE_CLEAN": true,
+      "PARENT_CHILD_PROBE_PASS": true
+    }
+  },
+  "decisions": {
+    "CHUNKING_STRATEGY_V2_OFFLINE": "PASS",
+    "OFFLINE_PREFERRED_STRATEGY": "B",
+    "READY_FOR_RETRIEVAL_AB_EVAL": "YES"
+  },
+  "strategy_a_aggregate": {
+    "STRATEGY": "A",
+    "TOTAL_CHUNKS": 1849,
+    "OVERSIZED_CHUNKS": 0,
+    "VERY_SMALL_CHUNKS": 0,
+    "CROSS_ARTICLE_CHUNKS": 913,
+    "CROSS_SECTION_CHUNKS": 267,
+    "HEADING_ORPHAN_COUNT": 0,
+    "ARTICLE_ORPHAN_COUNT": 0,
+    "TABLE_CHUNKS": 321,
+    "TABLE_RELATIONSHIP_LOSS": 238,
+    "PROVENANCE_FAILURES": 0,
+    "METADATA_CONTRACT_FAILURES": 0,
+    "AVG_LEN_CHARS": 506.89,
+    "MEDIAN_LEN_CHARS_APPROX": 512.0,
+    "P95_LEN_CHARS_APPROX": 512.0,
+    "MIN_LEN_CHARS": 135,
+    "MAX_LEN_CHARS": 512,
+    "AVG_COVERAGE_PCT": 100.0,
+    "AVG_DUPLICATED_TEXT_RATIO": 0.57038
+  },
+  "strategy_b_aggregate": {
+    "STRATEGY": "B",
+    "TOTAL_CHUNKS": 4145,
+    "OVERSIZED_CHUNKS": 10,
+    "VERY_SMALL_CHUNKS": 1196,
+    "CROSS_ARTICLE_CHUNKS": 0,
+    "CROSS_SECTION_CHUNKS": 85,
+    "HEADING_ORPHAN_COUNT": 482,
+    "ARTICLE_ORPHAN_COUNT": 81,
+    "TABLE_CHUNKS": 217,
+    "TABLE_RELATIONSHIP_LOSS": 0,
+    "PROVENANCE_FAILURES": 0,
+    "METADATA_CONTRACT_FAILURES": 0,
+    "AVG_LEN_CHARS": 196.96,
+    "MEDIAN_LEN_CHARS_APPROX": 148.71,
+    "P95_LEN_CHARS_APPROX": 550.03,
+    "MIN_LEN_CHARS": 1,
+    "MAX_LEN_CHARS": 1724,
+    "AVG_COVERAGE_PCT": 100.0,
+    "AVG_DUPLICATED_TEXT_RATIO": 0.30162
+  },
+  "deliverables": {
+    "strategy_a_chunks": "strategy_a_chunks.json",
+    "strategy_b_chunks": "strategy_b_chunks.json",
+    "ab_metrics": "chunking_ab_metrics.csv",
+    "doc_metrics": "chunking_ab_document_metrics.csv",
+    "table_audit": "table_chunk_audit.csv",
+    "human_review_csv": "chunking_ab_human_review.csv",
+    "human_review_md": "chunking_ab_review_zh.md"
+  }
+}

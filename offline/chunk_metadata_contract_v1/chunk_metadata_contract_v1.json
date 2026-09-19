@@ -1,0 +1,240 @@
+{
+  "$schema": "https://schema.xiaoyi-legal.local/rag/chunk_metadata_contract_v1.schema.json",
+  "contract_id": "CMCV1-202601",
+  "contract_name": "XIAOYI Enterprise Legal RAG — Chunk Metadata Contract V1",
+  "status": "FROZEN_CANDIDATE",
+  "ratification": {
+    "CHUNK_METADATA_CONTRACT_V1": "PASS",
+    "READY_FOR_CHUNKING_STRATEGY_V2": "YES",
+    "READY_FOR_REINGESTION": "NO",
+    "READY_FOR_EMBEDDING": "NO",
+    "evidence": {
+      "unit_tests": {
+        "collected": 47,
+        "passed": 47,
+        "failed": 0,
+        "runtime": "~0.20s",
+        "pytest_exit_code": 0
+      },
+      "real_data_probe": {
+        "corpus": "53 canonical docs",
+        "probes_total": 6,
+        "probes_pass": 6,
+        "scenarios": [
+          "S1_MD_LEGAL_HIERARCHY_ARTICLE_1",
+          "S2_PDF_CIVIL_CODE_CHAPTER_SECTION_ARTICLE",
+          "S3_DOCX_CONTRACT_PREAMBLE",
+          "S4_DOCX_TABLE_PARTY_SIGNATURE_INFO",
+          "S5_PDF_PARENT_CHILD_DEMO_PARENT",
+          "S5_PDF_PARENT_CHILD_DEMO_CHILD"
+        ]
+      },
+      "upstream_safety": {
+        "parser_modified": false,
+        "cleaner_modified": false,
+        "metadata_normalizer_modified": false,
+        "metadata_contract_v1_modified": false,
+        "qgate_modified": false,
+        "human_gold_modified": false,
+        "canonical_manifest_modified": false,
+        "reingestion_run": false,
+        "chunking_run": false,
+        "embedding_run": false,
+        "db_writes": false
+      }
+    }
+  },
+  "design_principle": {
+    "layers": [
+      "A. IDENTITY",
+      "B. DOCUMENT METADATA",
+      "C. STRUCTURAL METADATA",
+      "D. PROVENANCE",
+      "E. RETRIEVAL / CHUNK RUNTIME METADATA"
+    ],
+    "notes": [
+      "Schema is typed dataclass (chunk_metadata_contract_v1.py).",
+      "No flattening into arbitrary dict.",
+      "Layer B inherits frozen MetadataContractV1 (NO overwrite, NO fabrication, NULL stays NULL).",
+      "Deterministic validation (16+ invariants, 17 prefixed in practice).",
+      "Stable across sliding-window / structure-aware / parent-child / table-aware chunkers."
+    ]
+  },
+  "chunk_id_contract": {
+    "algorithm": "SHA256 hex-prefix 32 chars",
+    "input_fields": [
+      "CMCV1",
+      "source_sha256",
+      "document_id",
+      "chunk_index",
+      "original_block_order_start",
+      "original_block_order_end"
+    ],
+    "input_joined_by": "|",
+    "output_format": "lowercase-hex length 32",
+    "reference_impl": "compute_chunk_id_contract in chunk_metadata_contract_v1.py"
+  },
+  "forbidden_sentinel_strings": [
+    "__UNSET__",
+    "__UNKNOWN__",
+    "__METADATA_BLOCK_VALUE__",
+    "__REVIEW_BLOCK__",
+    "__REVIEW__"
+  ],
+  "allowed_enums": {
+    "source_format": ["md", "txt", "pdf", "docx", "html"],
+    "chunk_level": ["PARENT", "CHILD", "ATOMIC"],
+    "block_type": [
+      "HEADING",
+      "PARAGRAPH",
+      "LIST_ITEM",
+      "TABLE",
+      "QUOTE",
+      "FOOTER",
+      "METADATA_BLOCK",
+      "REVIEW_BLOCK",
+      "UNKNOWN"
+    ],
+    "content_type": [
+      "LEGAL_TEXT",
+      "HEADING_ONLY",
+      "TABLE_ONLY",
+      "MIXED_TEXT_TABLE",
+      "METADATA_SEGMENT",
+      "REVIEW_CONTENT",
+      "UNKNOWN"
+    ],
+    "quality_verdict": [
+      "PASS",
+      "WARNING",
+      "POLICY_REVIEW",
+      "REVIEW",
+      "FAIL"
+    ]
+  },
+  "validation_invariants_frozen": {
+    "INV1":  "chunk_id non-empty, 32-hex lowercase",
+    "INV1.2": "chunk_id matches contract rule (deep determinism)",
+    "INV2":  "document_id non-empty",
+    "INV3":  "source_file non-empty, source_sha256 64-hex, chunk_index >= 0",
+    "INV4":  "source_block_orders non-empty (provenance mandatory)",
+    "INV5":  "source_block_orders strictly monotonic",
+    "INV6":  "no duplicate block orders",
+    "INV7":  "start/end order consistent with min/max",
+    "INV8":  "page_start <= page_end when both exist",
+    "INV9":  "every page_number inside [page_start, page_end]",
+    "INV10": "chapter/section/article nullable, non-empty if set, no whitespace pseudo-nulls",
+    "INV11": "sentinel values forbidden in any public field",
+    "INV12": "strict schema: extras must be empty dict",
+    "INV13": "TABLE structure internally consistent + table orders subset of provenance",
+    "INV14": "parent_chunk_id optional (when present, correct format); chunk_level vocabulary valid",
+    "INV15": "no document metadata semantic overwrite / no fabrication / sentinel rejected",
+    "INV16": "metadata round-trip serialization stable (to_dict -> from_dict)",
+    "INV17": "chunk_id determinism against runtime-computed contract id"
+  },
+  "document_metadata_projection": {
+    "rules": [
+      "Inherit verbatim from frozen MetadataContractV1",
+      "Null stays null",
+      "No LWW",
+      "Internal sentinels forbidden",
+      "Unknown values must NOT be fabricated"
+    ]
+  },
+  "table_lineage_rules": {
+    "contains_table_iff": "table_ids non-empty AND source_table_block_orders non-empty",
+    "source_table_block_orders_subset_of": "provenance.source_block_orders",
+    "structured_authoritative_truth": "ParsedDocument.Block.table_data (TableData)",
+    "markdown_role": "projection only (embedding/display, not canonical)"
+  },
+  "parent_child_rules": {
+    "schema_writes": "optional parent_chunk_id + chunk_level enum",
+    "future_safe": "additive new chunk_level values are allowed without schema rewrite"
+  },
+  "retrieval_filtering": {
+    "HIGH_FREQUENCY_FILTER_SCALAR_CANDIDATES": [
+      "logical_document_id",
+      "source_file",
+      "source_format",
+      "source_org",
+      "effective_date",
+      "document_type",
+      "chapter",
+      "section",
+      "article"
+    ],
+    "classification_values": ["FILTER_SCALAR_CANDIDATE", "JSON_AUXILIARY", "NOT_FILTERED"]
+  },
+  "embedding_policies": {
+    "RETRIEVAL_FILTER_ONLY": [
+      "chunk_id",
+      "document_id",
+      "source_sha256",
+      "source_format",
+      "contract_version",
+      "chunk_index",
+      "extras"
+    ],
+    "CITATION_ONLY": [
+      "source_file",
+      "source_org",
+      "publish_date",
+      "creation_date",
+      "expiry_date",
+      "document_number",
+      "document_index_number",
+      "authority_level",
+      "legal_status",
+      "jurisdiction",
+      "source_url",
+      "parser_name",
+      "parser_version"
+    ],
+    "OPTIONAL_CONTEXT_PREFIX": [
+      "title",
+      "effective_date",
+      "document_type",
+      "region",
+      "theme_category",
+      "chapter",
+      "section",
+      "article",
+      "heading_path",
+      "heading_level",
+      "block_type",
+      "content_type"
+    ],
+    "NEVER_EMBED": [
+      "quality_verdict",
+      "quality_warnings",
+      "has_review_content",
+      "parent_chunk_id",
+      "chunk_level",
+      "table_part_index",
+      "table_parts_total",
+      "page_start",
+      "page_end",
+      "page_numbers"
+    ]
+  },
+  "source_owners": ["PARSER", "METADATA_NORMALIZER", "CHUNKER", "QGATE", "DERIVED_DETERMINISTIC"],
+  "deliverables_in_this_directory": [
+    "chunk_metadata_contract_v1.py",
+    "test_chunk_metadata_contract_v1.py",
+    "chunk_metadata_field_matrix.csv",
+    "chunk_metadata_real_probe.csv",
+    "chunk_metadata_contract_v1.md",
+    "chunk_metadata_contract_v1.json"
+  ],
+  "STOP_GATE": {
+    "delivered_stages": ["CHUNK_METADATA_CONTRACT_V1"],
+    "stopped_before": [
+      "CHUNKING_STRATEGY_V2",
+      "CHUNK GENERATION",
+      "EMBEDDING",
+      "REINGESTION",
+      "DATABASE WRITE (Milvus/MySQL/Redis)"
+    ],
+    "upstream_production_mutation": "FORBIDDEN"
+  }
+}

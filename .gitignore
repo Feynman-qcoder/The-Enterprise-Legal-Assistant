@@ -1,0 +1,59 @@
+# Secrets & local env
+.env
+.env.local
+.env.*.local
+.env.bak*
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Node / frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+frontend/dist/
+frontend/build/
+
+# Project-local tooling & software bundle (do not commit)
+项目用到的软件及工具/
+data/
+models/
+
+# Deploy / offline bundles (often exceed GitHub 100MB file limit)
+deploy/*.tar
+
+# IDE / editor
+.idea/
+.vscode/
+
+# Temp tooling, logs and one-off audit outputs (do not commit)
+.pytest_tmp/
+.codex_tmp_*
+logs/
+adjudication_output/
+cleaner_v1_1_*
+_tmp_*
+*.log
+
+# Task 22: model weights (2.16GB legal_eval_audit outputs) — GitHub 100MB hard limit
+*.safetensors
+
+# Raw corpus (official published laws / model contracts) — do not track future additions
+data_corpus/

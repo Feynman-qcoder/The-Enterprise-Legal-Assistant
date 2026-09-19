@@ -1,0 +1,59 @@
+{
+  "A": {
+    "total": 2250,
+    "canon": 1849,
+    "syn": 401,
+    "empty": 0,
+    "dups_renamed": 2249,
+    "per_syn": {
+      "SYN-001": 25,
+      "SYN-002": 24,
+      "SYN-003": 20,
+      "SYN-004": 20,
+      "SYN-005": 23,
+      "SYN-006": 24,
+      "SYN-007": 14,
+      "SYN-008": 28,
+      "SYN-009": 207,
+      "SYN-010": 16
+    },
+    "source_files": {
+      "canon_a_chunks": {
+        "exists": true,
+        "size": 8063354,
+        "mtime": 1787278273.9807134
+      }
+    }
+  },
+  "B": {
+    "total": 4599,
+    "canon": 4145,
+    "syn": 454,
+    "empty": 0,
+    "dups_renamed": 4598,
+    "per_syn": {
+      "SYN-001": 32,
+      "SYN-002": 32,
+      "SYN-003": 25,
+      "SYN-004": 25,
+      "SYN-005": 29,
+      "SYN-006": 29,
+      "SYN-007": 24,
+      "SYN-008": 39,
+      "SYN-009": 196,
+      "SYN-010": 23
+    },
+    "source_files": {
+      "canon_b_chunks": {
+        "exists": true,
+        "size": 14313090,
+        "mtime": 1787278274.8676407
+      }
+    }
+  },
+  "syn_block_map": {
+    "docs": 10,
+    "covered_core_fields_sum": 99,
+    "total_core_fields_sum": 100
+  }
+}

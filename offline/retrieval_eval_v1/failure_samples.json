@@ -1,0 +1,320 @@
+[
+  {
+    "pattern": "A_HIT_B_MISS",
+    "query_id": "CQ-004",
+    "query_type": "contract_fact",
+    "query": "乙方逾期交付数据委托处理合同标的物的违约金率是多少？上限？",
+    "difficulty": "hard",
+    "rank_A": 2,
+    "rank_B": null,
+    "A_top1_snippet": "违约金；累计违约金上限为合同金额的12%；甲方逾期付款按日万分之二支付滞纳金。\n争议解决与管辖：因本合同发生之争议，由上海市浦东新区人民法院诉讼管辖。\n关键条款事实：\n- tax_rate：0.06\n- subcontract：未经甲方书面…",
+    "B_top1_snippet": "违约条款：乙方逾期供货按日支付当批次未供货金额0.03%的违约金，上限15%；\n产品不合格造成甲方工程损失的，乙方据实赔付。",
+    "gt_doc_ids": [
+      "CONTRACT_008",
+      "SYN-001",
+      "SYN_CONTRACT_001_DATA_PROC"
+    ]
+  },
+  {
+    "pattern": "A_HIT_B_MISS",
+    "query_id": "CQ-009",
+    "query_type": "contract_fact",
+    "query": "数据委托处理合同的争议解决机构是？管辖法院？",
+    "difficulty": "hard",
+    "rank_A": 7,
+    "rank_B": null,
+    "A_top1_snippet": "反合同约定造成原始数据的重大泄露或滥用事件的。\n5.有下列情形之一的，乙方有权单方解除本合同：\n（1）甲方要求委托处理的原始数据在合法性、合规性、权属等方面存在重大问题的。\n（2）甲方未履行合同主要义务且经乙方催告仍不履行义务超过 个工作日…",
+    "B_top1_snippet": "（六）数据使用权：是指权利人通过加工、聚合、分析等方式，将数据用于优化生产经营、提供社会服务、形成衍生数据等的权利。一般来说，使用权是权利人在不对外提供数据的前提下，将数据用于内部使用的权利。\n（七）数据经营权：是指权利人通过转让、许可、出…",
+    "gt_doc_ids": [
+      "CONTRACT_008",
+      "SYN-002",
+      "SYN_CONTRACT_002_DATA_PROC"
+    ]
+  },
+  {
+    "pattern": "A_HIT_B_MISS",
+    "query_id": "CQ-014",
+    "query_type": "contract_fact",
+    "query": "本数据中介服务合同约定的纠纷解决方式是诉讼还是仲裁？具体机构？",
+    "difficulty": "hard",
+    "rank_A": 8,
+    "rank_B": null,
+    "A_top1_snippet": "，任何一方不得将本合同项下的权利或义务转让给第三方。\n3.因不可抗力情形致使合同无法继续履行的，本合同自不可抗力发生之日起解除。当事人主张解除合同的，应当及时通知其他当事人。\n4.有下列情形之一的，乙方有权单方解除合同：\n（1）标的数据的合…",
+    "B_top1_snippet": "人民法院或者仲裁机构应当结合案件的实际情况 ， 根据公平原则变更或\n者解除合同 。",
+    "gt_doc_ids": [
+      "CONTRACT_006",
+      "SYN-003",
+      "SYN_CONTRACT_003_DATA_AGENCY"
+    ]
+  },
+  {
+    "pattern": "A_HIT_B_MISS",
+    "query_id": "CQ-002",
+    "query_type": "contract_fact",
+    "query": "XH-YS-SYN-2026-0418-001合同的甲方（委托方）是谁？",
+    "difficulty": "easy",
+    "rank_A": 4,
+    "rank_B": null,
+    "A_top1_snippet": "0512-SYN-0003 [卖方/乙方]广东省深圳市南山区科技园南区 SYN-19 栋海岳大厦 8 层（虚构） 0755-SYN-0004 |\n| 乙方收款信息 | 开户行 | |\n| 乙方收款信息 | 账号 | |\n第五条 双方义务\n5…",
+    "B_top1_snippet": "第十八条 其他\n。\n甲方（买受人，签名/盖章）：杭州云杉数据服务有限公司（SYNTHETIC） 乙方（出卖人，签名/盖章）：成都远川工程管理有限公司（SYNTHETIC）\n甲方法定代表人：孟惊鸿（SYNTHETIC） 乙方法定代表人：程雪楼…",
+    "gt_doc_ids": [
+      "CONTRACT_008",
+      "SYN-001",
+      "SYN_CONTRACT_001_DATA_PROC"
+    ]
+  },
+  {
+    "pattern": "A_HIT_B_MISS",
+    "query_id": "CQ-041",
+    "query_type": "contract_fact",
+    "query": "2026-05-20签订的本合同，乙方为哪家公司？",
+    "difficulty": "easy",
+    "rank_A": 8,
+    "rank_B": null,
+    "A_top1_snippet": "nd Truth 事实附录（SYNTHETIC）】\nsynthetic_contract_id：SYN-006\n合同类型：PROCUREMENT_MATERIAL\n合同编号：QM-HY-SYN-2026-0515-006\n甲方：苏州启明智能…",
+    "B_top1_snippet": "第十八条 其他\n。\n甲方（买受人，签名/盖章）：杭州云杉数据服务有限公司（SYNTHETIC） 乙方（出卖人，签名/盖章）：成都远川工程管理有限公司（SYNTHETIC）\n甲方法定代表人：孟惊鸿（SYNTHETIC） 乙方法定代表人：程雪楼…",
+    "gt_doc_ids": [
+      "CONTRACT_017",
+      "SYN-009",
+      "SYN_CONTRACT_009_EPC"
+    ]
+  },
+  {
+    "pattern": "B_HIT_A_MISS",
+    "query_id": "CQ-015",
+    "query_type": "contract_fact",
+    "query": "数据中介服务合同重要条款中关于标的物数量与比例的说明？",
+    "difficulty": "hard",
+    "rank_A": null,
+    "rank_B": 7,
+    "A_top1_snippet": "大写数字为准。\n六、本合同文本未尽事项，可由当事人附页另行约定，并作为本合同的组成部分。\n七、名词解释：\n（一）标的数据：是指本合同约定的中介服务对应的一系列数据。\n（二）数据中介服务：是指依据合同约定，中介方向委托方提供的市场推广、客户对…",
+    "B_top1_snippet": "六、本合同文本未尽事项，可由当事人附页另行约定，并作为本合同的组成部分。\n七、名词解释：\n（一）标的数据：是指本合同约定的中介服务对应的一系列数据。\n（二）数据中介服务：是指依据合同约定，中介方向委托方提供的市场推广、客户对接、合同订立等交…",
+    "gt_doc_ids": [
+      "CONTRACT_006",
+      "SYN-003",
+      "SYN_CONTRACT_003_DATA_AGENCY"
+    ]
+  },
+  {
+    "pattern": "B_HIT_A_MISS",
+    "query_id": "CQ-024",
+    "query_type": "contract_fact",
+    "query": "请查询材料采购合同的管辖法院/仲裁条款。",
+    "difficulty": "hard",
+    "rank_A": null,
+    "rank_B": 3,
+    "A_top1_snippet": "付材料款（大写）元。\n第十二条 报酬及材料费的结算方式及期限： 第十三条 保修期限： 第十四条 本合同解除的条件： 第十五条 违约责任：\n第十六条合同争议的解决方式：本合同在履行过程中发生的争议，由双方当事人协商解 决；也可由当地工商行政管…",
+    "B_top1_snippet": "第三十五条　合同或者其他财产权益纠纷的当事人可以书面协议选择被告\n住所地、合同履行地、合同签订地、原告住所地、标的物所在地等与争议有实际\n联系的地点的人民法院管辖，但不得违反本法对级别管辖和专属管辖的规定。",
+    "gt_doc_ids": [
+      "CONTRACT_111",
+      "SYN-005",
+      "SYN_CONTRACT_005_PROC_MAT"
+    ]
+  },
+  {
+    "pattern": "B_HIT_A_MISS",
+    "query_id": "CQ-050",
+    "query_type": "contract_fact",
+    "query": "本合同重要事实中的量化指标有哪些（百分比/吨/保底金额等）？",
+    "difficulty": "hard",
+    "rank_A": null,
+    "rank_B": 9,
+    "A_top1_snippet": ".00 | 637,160.00 | 82,840.00 | 720,000.00 |\n| 2 | 矿渣粉 S95 | GB/T 18046-2017 | 海岳供应链下属合作工厂（SYN） | GB/T 18046-2017 | 1000 …",
+    "B_top1_snippet": "合同金额（含税，元）：人民币 1,250,000 元（大写：壹佰贰拾伍万元整（SYNTHETIC））\n币种：人民币（CNY）\n付款条件与方式：结果数据验收合格后30个工作日内支付80%即1,000,000元，质量保证期届满30个工作日内支付…",
+    "gt_doc_ids": [
+      "CONTRACT_005",
+      "SYN-010",
+      "SYN_CONTRACT_010_ENTRUST"
+    ]
+  },
+  {
+    "pattern": "B_HIT_A_MISS",
+    "query_id": "CQ-031",
+    "query_type": "contract_fact",
+    "query": "合同编号YS-YC-SYN-2026-0320-007中，乙方名称是？",
+    "difficulty": "easy",
+    "rank_A": null,
+    "rank_B": 1,
+    "A_top1_snippet": "0512-SYN-0003 [卖方/乙方]广东省深圳市南山区科技园南区 SYN-19 栋海岳大厦 8 层（虚构） 0755-SYN-0004 |\n| 乙方收款信息 | 开户行 | |\n| 乙方收款信息 | 账号 | |\n第五条 双方义务\n5…",
+    "B_top1_snippet": "第十八条 其他\n。\n甲方（买受人，签名/盖章）：杭州云杉数据服务有限公司（SYNTHETIC） 乙方（出卖人，签名/盖章）：成都远川工程管理有限公司（SYNTHETIC）\n甲方法定代表人：孟惊鸿（SYNTHETIC） 乙方法定代表人：程雪楼…",
+    "gt_doc_ids": [
+      "CONTRACT_003",
+      "SYN-007",
+      "SYN_CONTRACT_007_SALE_AGRI"
+    ]
+  },
+  {
+    "pattern": "B_HIT_A_MISS",
+    "query_id": "CQ-034",
+    "query_type": "contract_fact",
+    "query": "YS-YC-SYN-2026-0320-007合同提前解除的通知期限是多少日？",
+    "difficulty": "medium",
+    "rank_A": null,
+    "rank_B": 2,
+    "A_top1_snippet": "日期：2026-05-01\n到期日期：2028-06-30\n自动续约：是（是，续约期1年）\n续约期限：1年\n提前解除通知期限：90日\n合同金额（含税，元）：人民币 1,250,000 元（大写：壹佰贰拾伍万元整（SYNTHETIC））\n币种…",
+    "B_top1_snippet": "提前解除通知期限：30日\n合同金额（含税，元）：人民币 450,000 元（大写：肆拾伍万元整（SYNTHETIC））\n币种：人民币（CNY）\n付款条件与方式：乙方促成甲方与数据需求方签约并完成验收后30日内，甲方按实际成交金额的3.2%向…",
+    "gt_doc_ids": [
+      "CONTRACT_003",
+      "SYN-007",
+      "SYN_CONTRACT_007_SALE_AGRI"
+    ]
+  },
+  {
+    "pattern": "A_BETTER_RANK",
+    "query_id": "CQ-017",
+    "query_type": "contract_fact",
+    "query": "请问数据中介服务合同期满是否会自动续签？若续约，续多久？",
+    "difficulty": "medium",
+    "rank_A": 4,
+    "rank_B": 9,
+    "A_top1_snippet": "条 其他规定\n1.本合同自双方签字并盖章之日起生效，有效期至 年 月 日止。\n2.本合同一式 份，各方各执 份，具有同等法律效力。\n3.本合同中部分条款被认定为无效或不可执行，不影响合同其他条款。\n4.本合同构成双方关于数据中介服务的完整协…",
+    "B_top1_snippet": "第十一条 其他规定\n1.本合同自双方签字并盖章之日起生效，有效期至 年 月 日止。\n2.本合同一式 份，各方各执 份，具有同等法律效力。\n3.本合同中部分条款被认定为无效或不可执行，不影响合同其他条款。\n4.本合同构成双方关于数据中介服务的…",
+    "gt_doc_ids": [
+      "CONTRACT_006",
+      "SYN-004",
+      "SYN_CONTRACT_004_DATA_AGENCY"
+    ]
+  },
+  {
+    "pattern": "A_BETTER_RANK",
+    "query_id": "CQ-019",
+    "query_type": "contract_fact",
+    "query": "数据中介服务合同终止条款中，解约提前通知期多长？",
+    "difficulty": "medium",
+    "rank_A": 2,
+    "rank_B": 7,
+    "A_top1_snippet": "，任何一方不得将本合同项下的权利或义务转让给第三方。\n3.因不可抗力情形致使合同无法继续履行的，本合同自不可抗力发生之日起解除。当事人主张解除合同的，应当及时通知其他当事人。\n4.有下列情形之一的，乙方有权单方解除合同：\n（1）标的数据的合…",
+    "B_top1_snippet": "提前解除通知期限：30日\n合同金额（含税，元）：人民币 450,000 元（大写：肆拾伍万元整（SYNTHETIC））\n币种：人民币（CNY）\n付款条件与方式：乙方促成甲方与数据需求方签约并完成验收后30日内，甲方按实际成交金额的3.2%向…",
+    "gt_doc_ids": [
+      "CONTRACT_006",
+      "SYN-004",
+      "SYN_CONTRACT_004_DATA_AGENCY"
+    ]
+  },
+  {
+    "pattern": "A_BETTER_RANK",
+    "query_id": "CQ-044",
+    "query_type": "contract_fact",
+    "query": "本合同终止条款中，解约提前通知期多长？",
+    "difficulty": "medium",
+    "rank_A": 4,
+    "rank_B": 9,
+    "A_top1_snippet": "日期：2026-05-01\n到期日期：2028-06-30\n自动续约：是（是，续约期1年）\n续约期限：1年\n提前解除通知期限：90日\n合同金额（含税，元）：人民币 1,250,000 元（大写：壹佰贰拾伍万元整（SYNTHETIC））\n币种…",
+    "B_top1_snippet": "提前解除通知期限：30日\n合同金额（含税，元）：人民币 450,000 元（大写：肆拾伍万元整（SYNTHETIC））\n币种：人民币（CNY）\n付款条件与方式：乙方促成甲方与数据需求方签约并完成验收后30日内，甲方按实际成交金额的3.2%向…",
+    "gt_doc_ids": [
+      "CONTRACT_017",
+      "SYN-009",
+      "SYN_CONTRACT_009_EPC"
+    ]
+  },
+  {
+    "pattern": "A_BETTER_RANK",
+    "query_id": "CQ-048",
+    "query_type": "contract_fact",
+    "query": "是否自动续约条款查询。",
+    "difficulty": "medium",
+    "rank_A": 2,
+    "rank_B": 5,
+    "A_top1_snippet": "日期：2026-05-01\n到期日期：2028-06-30\n自动续约：是（是，续约期1年）\n续约期限：1年\n提前解除通知期限：90日\n合同金额（含税，元）：人民币 1,250,000 元（大写：壹佰贰拾伍万元整（SYNTHETIC））\n币种…",
+    "B_top1_snippet": "自动续约：否，合同期满自动终止，不再续约；\n如需续约双方另行签订书面合同。\n提前解除通知期限：60日；\n违约解除违约金：2个月租金。\n违约责任：乙方逾期支付租金按日万分之三付滞纳金；\n甲方逾期交房按日万分之三付违约金；\n乙方擅自转租的，甲方…",
+    "gt_doc_ids": [
+      "CONTRACT_005",
+      "SYN-010",
+      "SYN_CONTRACT_010_ENTRUST"
+    ]
+  },
+  {
+    "pattern": "A_BETTER_RANK",
+    "query_id": "LQ-023",
+    "query_type": "legal_clause",
+    "query": "个人信息保护法第三条的主要内容是什么？",
+    "difficulty": "medium",
+    "rank_A": 1,
+    "rank_B": 4,
+    "A_top1_snippet": "int())【纠错】\n中华人民共和国个人信息保护法\n（2021年8月20日第十三届全国人民代表大会常务委员会第三十次会议通过）\n目　　录\n第一章　总　　则\n第二章　个人信息处理规则\n第一节　一般规定\n第二节　敏感个人信息的处理规则\n第三节　…",
+    "B_top1_snippet": "中华人民共和国个人信息保护法\n2021年08月20日 21:21\n来源：\n中国人大网\n[](#)[](#)\n Baidu Button BEGIN\n[](#) [](#)\n Baidu Button END [【打印】](javascrip…",
+    "gt_doc_ids": [
+      "LAW_001"
+    ]
+  },
+  {
+    "pattern": "B_BETTER_RANK",
+    "query_id": "CQ-030",
+    "query_type": "contract_fact",
+    "query": "材料采购合同项下的产品/服务数量是多少？（吨/千克/件）",
+    "difficulty": "hard",
+    "rank_A": 9,
+    "rank_B": 2,
+    "A_top1_snippet": "通。\n（六）变更。\n十一、其他要求\n（一）对承包人的主要人员资格要求。\n（二）相关审批、核准和备案手续的办理。\n（三）对项目业主人员的操作培训。\n（四）分包。\n（五）设备供应商。\n（六）缺陷责任期的服务要求。\n附件 2\n发包人供应材料设备一…",
+    "B_top1_snippet": "一、合同的组成\n以下文件是本合同不可分割的组成部分，如果不同文件的条款之间有冲突，文件之间的优先效力顺序如下：\n1.本合同及其附件、补充协议；\n2.中标通知书（含乙方承诺函等）；\n3.乙方提供的投标文件（含澄清文件及承诺等）；\n4.甲方发出…",
+    "gt_doc_ids": [
+      "CONTRACT_111",
+      "SYN-006",
+      "SYN_CONTRACT_006_PROC_MAT"
+    ]
+  },
+  {
+    "pattern": "B_BETTER_RANK",
+    "query_id": "CQ-006",
+    "query_type": "contract_fact",
+    "query": "该合同总价为多少人民币？合同款额是多少？",
+    "difficulty": "easy",
+    "rank_A": 10,
+    "rank_B": 2,
+    "A_top1_snippet": "价（含税）：人民币 12,000,000 元（大写：壹仟贰佰元整（SYNTHETIC），税率 9%）\n付款安排：签约合同价含税12,000,000元；签约后10日内付10%预付款=1,200,000元；按月计量进度款（当月审核后30日内付至…",
+    "B_top1_snippet": "合同金额（含税，元）：人民币 3,920,000 元（大写：叁佰玖拾贰万元整（SYNTHETIC））\n币种：人民币（CNY）\n付款条件与方式：甲方按季度预付固定佣金人民币980,000元整/季；\n每季度开始前5个工作日支付；\n首年合计3,9…",
+    "gt_doc_ids": [
+      "CONTRACT_008",
+      "SYN-002",
+      "SYN_CONTRACT_002_DATA_PROC"
+    ]
+  },
+  {
+    "pattern": "B_BETTER_RANK",
+    "query_id": "CQ-008",
+    "query_type": "contract_fact",
+    "query": "甲方向乙方支付数据委托处理合同款项的付款条件和时间节点？",
+    "difficulty": "medium",
+    "rank_A": 6,
+    "rank_B": 3,
+    "A_top1_snippet": "甲方一次性向乙方支付全部费用。\n3.乙方应依法向甲方开具等额有效的增值税□专用□普通发票。如因国家税务政策变更等导致税率变化，应以变化后的税率为准。\n4.乙方收款账户信息：\n账户名称： ；\n开户银行： ；\n账 号： 。\n5.甲方开票信息：\n…",
+    "B_top1_snippet": "第五条 付款方式\n（一）甲方按照以下第 种方式支付委托费用。\n1.一次性付款，付款时间为： 。\n2.分期付款，付款时间及数额分别为：\n（1） ；\n（2） ；\n（3） 。\n（二）乙方收款账户信息：\n户名： ；\n账号： ；\n开户行： 。",
+    "gt_doc_ids": [
+      "CONTRACT_008",
+      "SYN-002",
+      "SYN_CONTRACT_002_DATA_PROC"
+    ]
+  },
+  {
+    "pattern": "B_BETTER_RANK",
+    "query_id": "CQ-013",
+    "query_type": "contract_fact",
+    "query": "任何一方要求不再续约或提前解除需提前多少天通知？",
+    "difficulty": "medium",
+    "rank_A": 10,
+    "rank_B": 1,
+    "A_top1_snippet": "表示或者以自己的行为表明\n不履行主要债务 ；\n（ 三 ） 当事人一方迟延履行主要债务 ， 经催告后在合理期限内仍未履行 ；\n（ 四 ） 当事人一方迟延履行债务或者有其他违约行为致使不能实现合同\n目的 ；\n（ 五 ） 法律规定的其他情形 。\n…",
+    "B_top1_snippet": "提前解除通知期限：30日\n合同金额（含税，元）：人民币 450,000 元（大写：肆拾伍万元整（SYNTHETIC））\n币种：人民币（CNY）\n付款条件与方式：乙方促成甲方与数据需求方签约并完成验收后30日内，甲方按实际成交金额的3.2%向…",
+    "gt_doc_ids": [
+      "CONTRACT_006",
+      "SYN-003",
+      "SYN_CONTRACT_003_DATA_AGENCY"
+    ]
+  },
+  {
+    "pattern": "B_BETTER_RANK",
+    "query_id": "CQ-032",
+    "query_type": "contract_fact",
+    "query": "YS-YC-SYN-2026-0320-007合同约定的续约条款是怎样的？是否自动续期？",
+    "difficulty": "medium",
+    "rank_A": 8,
+    "rank_B": 1,
+    "A_top1_snippet": "日期：2026-05-01\n到期日期：2028-06-30\n自动续约：是（是，续约期1年）\n续约期限：1年\n提前解除通知期限：90日\n合同金额（含税，元）：人民币 1,250,000 元（大写：壹佰贰拾伍万元整（SYNTHETIC））\n币种…",
+    "B_top1_snippet": "自动续约：否\n提前解除通知期限：15日\n违约责任：乙方交货质量不合格按当批次货款的20%支付违约金，并应在3日内免费调换；\n甲方逾期付款按日万分之三支付滞纳金。\n争议解决：因本合同发生之争议，由杭州市余杭区人民法院诉讼管辖。\n仓储要求：无冷…",
+    "gt_doc_ids": [
+      "CONTRACT_003",
+      "SYN-007",
+      "SYN_CONTRACT_007_SALE_AGRI"
+    ]
+  }
+]

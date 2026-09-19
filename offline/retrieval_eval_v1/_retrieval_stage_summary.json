@@ -1,0 +1,8 @@
+{
+  "gate": "PASS",
+  "review_required": false,
+  "summary": "FINAL: RETRIEVAL_EVAL_V1 = PASS | B@10=0.7800 / A@10=0.7700 | ΔRecall@10=+0.0086 95%CI[-0.0600,+0.0800] | REVIEW_REQUIRED=N",
+  "metric_rows": 6,
+  "retrieval_rows": 3000,
+  "failure_samples": 20
+}

@@ -1,0 +1,13 @@
+# =============================================================================
+# 强制 LF 行尾（本目录的文件要在 Linux/AutoDL 上执行）
+# -----------------------------------------------------------------------------
+# 背景：本机 git 配置 core.autocrlf=true。
+#   不加这条规则会发生什么：
+#     提交时 CRLF→LF（没问题）；但**检出时 LF→CRLF**，
+#     于是 deploy/autodl/deploy_autodl.sh 在 Windows 上被检出后带上了 \r，
+#     拷到 AutoDL（Linux）执行时报：
+#         bash: deploy_autodl.sh: /usr/bin/env: bad interpreter: No such file or directory
+#     或者一堆 `$'\r': command not found`。
+#   加上 `eol=lf` 后，无论谁在什么平台检出，这里始终是 LF。
+# =============================================================================
+* text eol=lf

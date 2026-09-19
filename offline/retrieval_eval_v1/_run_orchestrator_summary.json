@@ -1,0 +1,33 @@
+{
+  "gate": "PASS",
+  "timestamp": "2026-08-21T12:37:05",
+  "stage_results": [
+    {
+      "name": "skip_build_artifact_probe",
+      "status": "PASS",
+      "duration_s": 0.0026531219482421875,
+      "note": "all required artifacts present"
+    },
+    {
+      "name": "pytest_9cases",
+      "status": "PASS",
+      "duration_s": 4.813374042510986,
+      "note": "exit=0"
+    }
+  ],
+  "metrics": {
+    "A_Recall@10": 0.77,
+    "B_Recall@10": 0.78,
+    "delta_Recall@10": 0.010000000000000009,
+    "A_CE@10": 0.77,
+    "B_CE@10": 0.78,
+    "delta_CE@10": 0.010000000000000009,
+    "A_MRR@10": 0.415456,
+    "B_MRR@10": 0.536381,
+    "citation_fallback_rate": 0.05
+  },
+  "model_path": "D:\\xiaoyi\\Legal_System\\models\\bge-m3",
+  "embedding_stop_gate": "",
+  "failures": [],
+  "conclusion_cn": "Strategy B 在 Recall@10 上不劣于 Strategy A，同时 MRR 显著提升 (结构保留改善了首条命中排位)，因此可认定 Strategy B 更适合法律合同 RAG。"
+}

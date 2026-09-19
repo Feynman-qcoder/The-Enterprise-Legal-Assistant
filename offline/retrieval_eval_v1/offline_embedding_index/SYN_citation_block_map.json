@@ -1,0 +1,1771 @@
+{
+  "version": 1,
+  "by_synthetic_contract_id": {
+    "SYN-001": {
+      "synthetic_file": "SYN_CONTRACT_001_DATA_PROC.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "上海星河科技有限公司",
+          "search_needles": [
+            "上海星河科技有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_342c142426a19213",
+            "dup_42a1093912276439",
+            "dup_9175cfeee0c1690a",
+            "dup_cd8289d58ce9cb38",
+            "dup_d66334cf46896ec7",
+            "dup_dcb7002c6b9844ec"
+          ],
+          "B_chunk_ids": [
+            "dup_10c2f37a0248d1fd",
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_4aff16059496a892",
+            "dup_913f995f8f2174b2"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "杭州云杉数据服务有限公司",
+          "search_needles": [
+            "杭州云杉数据服务有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_342c142426a19213",
+            "dup_42a1093912276439",
+            "dup_cd8289d58ce9cb38",
+            "dup_d66334cf46896ec7",
+            "dup_dcb7002c6b9844ec"
+          ],
+          "B_chunk_ids": [
+            "dup_10c2f37a0248d1fd",
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_4aff16059496a892",
+            "dup_913f995f8f2174b2"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "1,200,000元",
+          "search_needles": [
+            "1,200,000元",
+            "1,200,000",
+            "1,200,000",
+            "1200000"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_42a1093912276439",
+            "dup_6d16ae9a80c6ea9a",
+            "dup_d66334cf46896ec7"
+          ],
+          "B_chunk_ids": [
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_4aff16059496a892",
+            "dup_7399608ea76f0881"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-04-18",
+          "search_needles": [
+            "2026-04-18",
+            "2026年4月18日"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_342c142426a19213",
+            "dup_42a1093912276439",
+            "dup_9175cfeee0c1690a",
+            "dup_cd8289d58ce9cb38",
+            "dup_dcb7002c6b9844ec"
+          ],
+          "B_chunk_ids": [
+            "dup_08f21f11a66a6531",
+            "dup_10c2f37a0248d1fd",
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_913f995f8f2174b2"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2027-02-28",
+          "search_needles": [
+            "2027-02-28",
+            "2027年2月28日"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_342c142426a19213",
+            "dup_42a1093912276439",
+            "dup_6d16ae9a80c6ea9a",
+            "dup_cd8289d58ce9cb38",
+            "dup_d66334cf46896ec7"
+          ],
+          "B_chunk_ids": [
+            "dup_10c2f37a0248d1fd",
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_4aff16059496a892"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，提交上海仲裁委员会按其届时有效仲裁规则仲裁解决；仲裁语言为中文，裁决为终局。",
+          "search_needles": [
+            "因本合同发生之争议，提交上海仲裁委员会按其届时有效仲裁规则仲裁解决；仲裁语言为中文，裁决为终局。"
+          ],
+          "A_chunk_ids": [
+            "dup_42a1093912276439",
+            "dup_cd8289d58ce9cb38",
+            "dup_d66334cf46896ec7"
+          ],
+          "B_chunk_ids": []
+        },
+        "contract_number": {
+          "ground_truth_display": "XH-YS-SYN-2026-0418-001",
+          "search_needles": [
+            "XH-YS-SYN-2026-0418-001"
+          ],
+          "A_chunk_ids": [
+            "dup_342c142426a19213",
+            "dup_cd8289d58ce9cb38",
+            "dup_d66334cf46896ec7"
+          ],
+          "B_chunk_ids": [
+            "dup_10c2f37a0248d1fd",
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_4aff16059496a892"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_cd8289d58ce9cb38"
+          ],
+          "B_chunk_ids": [
+            "dup_10c2f37a0248d1fd",
+            "dup_7399608ea76f0881"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "6%",
+          "search_needles": [
+            "6%",
+            "6%",
+            "0.06"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_42a1093912276439",
+            "dup_d66334cf46896ec7"
+          ],
+          "B_chunk_ids": [
+            "dup_2c53d1cbcaf3e5f0",
+            "dup_7399608ea76f0881"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "结果数据验收合格后30个工作日内，甲方向乙方一次性支付合同全款1,200,000元（含税6%）；乙方开具增值税专用发票。",
+          "search_needles": [
+            "结果数据验收合格后30个工作日内，甲方向乙方一次性支付合同全款1,200,000元（含税6%）；乙方开具增值税专用发票。"
+          ],
+          "A_chunk_ids": [
+            "dup_003020cf15a61895",
+            "dup_42a1093912276439"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-002": {
+      "synthetic_file": "SYN_CONTRACT_002_DATA_PROC.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "上海星河科技有限公司",
+          "search_needles": [
+            "上海星河科技有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_12632a3afffe24b9",
+            "dup_34087f7dd4ae99af",
+            "dup_6f5d60c78bbe7713",
+            "dup_9c6f58b4bdfd4980",
+            "dup_e7a69f46eea094a9",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_097a59a41b159cfe",
+            "dup_3d7d453a003cf20d",
+            "dup_c2c74d609bceda6c",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "深圳海岳供应链有限公司",
+          "search_needles": [
+            "深圳海岳供应链有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_34087f7dd4ae99af",
+            "dup_6f5d60c78bbe7713",
+            "dup_9c6f58b4bdfd4980",
+            "dup_e7a69f46eea094a9",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_097a59a41b159cfe",
+            "dup_3d7d453a003cf20d",
+            "dup_c2c74d609bceda6c",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "1,250,000元",
+          "search_needles": [
+            "1,250,000元",
+            "1,250,000",
+            "1,250,000",
+            "1250000"
+          ],
+          "A_chunk_ids": [
+            "dup_34087f7dd4ae99af",
+            "dup_598ba8c38450a78a",
+            "dup_9c6f58b4bdfd4980",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_3d7d453a003cf20d",
+            "dup_c9de10c67cef74fe",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-04-25",
+          "search_needles": [
+            "2026-04-25",
+            "2026年4月25日"
+          ],
+          "A_chunk_ids": [
+            "dup_12632a3afffe24b9",
+            "dup_34087f7dd4ae99af",
+            "dup_6f5d60c78bbe7713",
+            "dup_e7a69f46eea094a9",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_097a59a41b159cfe",
+            "dup_8c4dbfccec3d92eb",
+            "dup_c2c74d609bceda6c",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2028-06-30",
+          "search_needles": [
+            "2028-06-30",
+            "2028年6月30日"
+          ],
+          "A_chunk_ids": [
+            "dup_34087f7dd4ae99af",
+            "dup_598ba8c38450a78a",
+            "dup_6f5d60c78bbe7713",
+            "dup_9c6f58b4bdfd4980",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_097a59a41b159cfe",
+            "dup_3d7d453a003cf20d",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由上海市浦东新区人民法院诉讼管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由上海市浦东新区人民法院诉讼管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_598ba8c38450a78a",
+            "dup_9c6f58b4bdfd4980",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_c9de10c67cef74fe",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "XH-HY-SYN-2026-0425-002",
+          "search_needles": [
+            "XH-HY-SYN-2026-0425-002"
+          ],
+          "A_chunk_ids": [
+            "dup_34087f7dd4ae99af",
+            "dup_6f5d60c78bbe7713",
+            "dup_9c6f58b4bdfd4980"
+          ],
+          "B_chunk_ids": [
+            "dup_097a59a41b159cfe",
+            "dup_3d7d453a003cf20d",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "自动续约",
+          "search_needles": [
+            "自动续约",
+            "自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_34087f7dd4ae99af",
+            "dup_598ba8c38450a78a",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_097a59a41b159cfe",
+            "dup_c9de10c67cef74fe",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "6%",
+          "search_needles": [
+            "6%",
+            "6%",
+            "0.06"
+          ],
+          "A_chunk_ids": [
+            "dup_598ba8c38450a78a",
+            "dup_9c6f58b4bdfd4980",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_c9de10c67cef74fe",
+            "dup_eb7ee7941179782b"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "结果数据验收合格后30个工作日内支付80%即1,000,000元，质量保证期届满30个工作日内支付剩余20%即250,000元（含税6%）。",
+          "search_needles": [
+            "结果数据验收合格后30个工作日内支付80%即1,000,000元，质量保证期届满30个工作日内支付剩余20%即250,000元（含税6%）。"
+          ],
+          "A_chunk_ids": [
+            "dup_598ba8c38450a78a",
+            "dup_f3fdf41998daa7d5"
+          ],
+          "B_chunk_ids": [
+            "dup_c9de10c67cef74fe",
+            "dup_eb7ee7941179782b"
+          ]
+        }
+      }
+    },
+    "SYN-003": {
+      "synthetic_file": "SYN_CONTRACT_003_DATA_AGENCY.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "南京青禾信息技术有限公司",
+          "search_needles": [
+            "南京青禾信息技术有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_04caa765261e8f44",
+            "dup_2394dfdf9948113d",
+            "dup_61d65b226ed2e9c6",
+            "dup_8511261d8327cd54",
+            "dup_f5532d400ed0c5eb",
+            "dup_fbf9b5e22f595edb"
+          ],
+          "B_chunk_ids": [
+            "dup_0b3e3a0ac7ce5ce5",
+            "dup_1f3c252b58fbe5fe",
+            "dup_257b7206948ca22f",
+            "dup_6568800ce91649e1",
+            "dup_c467d14e7757e933"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "苏州启明智能制造有限公司",
+          "search_needles": [
+            "苏州启明智能制造有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_2394dfdf9948113d",
+            "dup_61d65b226ed2e9c6",
+            "dup_8511261d8327cd54",
+            "dup_f5532d400ed0c5eb",
+            "dup_fbf9b5e22f595edb"
+          ],
+          "B_chunk_ids": [
+            "dup_0b3e3a0ac7ce5ce5",
+            "dup_1f3c252b58fbe5fe",
+            "dup_257b7206948ca22f",
+            "dup_c467d14e7757e933"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "450,000元",
+          "search_needles": [
+            "450,000元",
+            "450,000",
+            "450,000",
+            "450000"
+          ],
+          "A_chunk_ids": [
+            "dup_2394dfdf9948113d",
+            "dup_61d65b226ed2e9c6",
+            "dup_80a6e328105504b3",
+            "dup_8511261d8327cd54",
+            "dup_fbf9b5e22f595edb"
+          ],
+          "B_chunk_ids": [
+            "dup_257b7206948ca22f",
+            "dup_837dd4c26e340cf1",
+            "dup_c467d14e7757e933"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-04-18",
+          "search_needles": [
+            "2026-04-18",
+            "2026年4月18日"
+          ],
+          "A_chunk_ids": [
+            "dup_4c07f6fba4591227",
+            "dup_61d65b226ed2e9c6",
+            "dup_8511261d8327cd54",
+            "dup_96152dbe5d8d11cb",
+            "dup_f5532d400ed0c5eb"
+          ],
+          "B_chunk_ids": [
+            "dup_0b3e3a0ac7ce5ce5",
+            "dup_1f3c252b58fbe5fe",
+            "dup_257b7206948ca22f",
+            "dup_7785cdb28897ed1c"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2027-04-30",
+          "search_needles": [
+            "2027-04-30",
+            "2027年4月30日"
+          ],
+          "A_chunk_ids": [
+            "dup_61d65b226ed2e9c6",
+            "dup_8511261d8327cd54"
+          ],
+          "B_chunk_ids": [
+            "dup_0b3e3a0ac7ce5ce5",
+            "dup_257b7206948ca22f"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，提交南京仲裁委员会仲裁。",
+          "search_needles": [
+            "因本合同发生之争议，提交南京仲裁委员会仲裁。"
+          ],
+          "A_chunk_ids": [
+            "dup_80a6e328105504b3",
+            "dup_fbf9b5e22f595edb"
+          ],
+          "B_chunk_ids": [
+            "dup_257b7206948ca22f",
+            "dup_837dd4c26e340cf1"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "QH-QM-SYN-2026-0418-003",
+          "search_needles": [
+            "QH-QM-SYN-2026-0418-003"
+          ],
+          "A_chunk_ids": [
+            "dup_2394dfdf9948113d",
+            "dup_61d65b226ed2e9c6",
+            "dup_8511261d8327cd54",
+            "dup_fbf9b5e22f595edb"
+          ],
+          "B_chunk_ids": [
+            "dup_0b3e3a0ac7ce5ce5",
+            "dup_257b7206948ca22f",
+            "dup_c467d14e7757e933"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_8511261d8327cd54"
+          ],
+          "B_chunk_ids": [
+            "dup_0b3e3a0ac7ce5ce5"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "6%",
+          "search_needles": [
+            "6%",
+            "6%",
+            "0.06"
+          ],
+          "A_chunk_ids": [
+            "dup_2394dfdf9948113d",
+            "dup_61d65b226ed2e9c6",
+            "dup_80a6e328105504b3",
+            "dup_fbf9b5e22f595edb"
+          ],
+          "B_chunk_ids": [
+            "dup_257b7206948ca22f",
+            "dup_837dd4c26e340cf1"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "乙方促成甲方与数据需求方签约并完成验收后30日内，甲方按实际成交金额的3.2%向乙方支付中介服务费（最低保底人民币450,000元整，按实际孰高结算）。",
+          "search_needles": [
+            "乙方促成甲方与数据需求方签约并完成验收后30日内，甲方按实际成交金额的3.2%向乙方支付中介服务费（最低保底人民币450,000元整，按实际孰高结算）。"
+          ],
+          "A_chunk_ids": [
+            "dup_61d65b226ed2e9c6",
+            "dup_8511261d8327cd54"
+          ],
+          "B_chunk_ids": [
+            "dup_257b7206948ca22f",
+            "dup_837dd4c26e340cf1"
+          ]
+        }
+      }
+    },
+    "SYN-004": {
+      "synthetic_file": "SYN_CONTRACT_004_DATA_AGENCY.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "南京青禾信息技术有限公司",
+          "search_needles": [
+            "南京青禾信息技术有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_11136a8997adcd11",
+            "dup_2859dc15de698d1e",
+            "dup_51d962f0c9ce532f",
+            "dup_722ce56d8e9e7792",
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab",
+            "dup_b87c1b7ad4791d94"
+          ],
+          "B_chunk_ids": [
+            "dup_66a444a22eb10063",
+            "dup_963d7332d14d9101",
+            "dup_aaa8c92ff13e1ca8",
+            "dup_c83098915886c9db",
+            "dup_d698e3136c7a9715"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "成都远川工程管理有限公司",
+          "search_needles": [
+            "成都远川工程管理有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_11136a8997adcd11",
+            "dup_51d962f0c9ce532f",
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab",
+            "dup_b87c1b7ad4791d94"
+          ],
+          "B_chunk_ids": [
+            "dup_66a444a22eb10063",
+            "dup_963d7332d14d9101",
+            "dup_aaa8c92ff13e1ca8",
+            "dup_c83098915886c9db"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "3,920,000元",
+          "search_needles": [
+            "3,920,000元",
+            "3,920,000",
+            "3,920,000",
+            "3920000"
+          ],
+          "A_chunk_ids": [
+            "dup_11136a8997adcd11",
+            "dup_2859dc15de698d1e",
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab"
+          ],
+          "B_chunk_ids": [
+            "dup_1103bf5d6a142302",
+            "dup_aaa8c92ff13e1ca8",
+            "dup_c83098915886c9db"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-04-28",
+          "search_needles": [
+            "2026-04-28",
+            "2026年4月28日"
+          ],
+          "A_chunk_ids": [
+            "dup_51d962f0c9ce532f",
+            "dup_891882431aa1459e",
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab",
+            "dup_c5910a3ae8ba2331"
+          ],
+          "B_chunk_ids": [
+            "dup_66a444a22eb10063",
+            "dup_8c47ee6930def613",
+            "dup_963d7332d14d9101",
+            "dup_aaa8c92ff13e1ca8"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2028-05-14",
+          "search_needles": [
+            "2028-05-14",
+            "2028年5月14日"
+          ],
+          "A_chunk_ids": [
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab"
+          ],
+          "B_chunk_ids": [
+            "dup_66a444a22eb10063",
+            "dup_aaa8c92ff13e1ca8"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由成都高新技术产业开发区人民法院诉讼管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由成都高新技术产业开发区人民法院诉讼管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_2859dc15de698d1e",
+            "dup_b87c1b7ad4791d94"
+          ],
+          "B_chunk_ids": [
+            "dup_1103bf5d6a142302",
+            "dup_aaa8c92ff13e1ca8"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "QH-YC-SYN-2026-0428-004",
+          "search_needles": [
+            "QH-YC-SYN-2026-0428-004"
+          ],
+          "A_chunk_ids": [
+            "dup_11136a8997adcd11",
+            "dup_2859dc15de698d1e",
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab",
+            "dup_b87c1b7ad4791d94"
+          ],
+          "B_chunk_ids": [
+            "dup_66a444a22eb10063",
+            "dup_aaa8c92ff13e1ca8",
+            "dup_c83098915886c9db"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "自动续约",
+          "search_needles": [
+            "自动续约",
+            "自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_2859dc15de698d1e",
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab",
+            "dup_b87c1b7ad4791d94"
+          ],
+          "B_chunk_ids": [
+            "dup_1103bf5d6a142302",
+            "dup_66a444a22eb10063",
+            "dup_aaa8c92ff13e1ca8"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "6%",
+          "search_needles": [
+            "6%",
+            "6%",
+            "0.06"
+          ],
+          "A_chunk_ids": [
+            "dup_2859dc15de698d1e",
+            "dup_8b8850be97ab0043",
+            "dup_b87c1b7ad4791d94"
+          ],
+          "B_chunk_ids": [
+            "dup_1103bf5d6a142302",
+            "dup_aaa8c92ff13e1ca8"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "甲方按季度预付固定佣金人民币980,000元整/季；每季度开始前5个工作日支付；首年合计3,920,000元；次年按同比±5%协商。",
+          "search_needles": [
+            "甲方按季度预付固定佣金人民币980,000元整/季；每季度开始前5个工作日支付；首年合计3,920,000元；次年按同比±5%协商。"
+          ],
+          "A_chunk_ids": [
+            "dup_8b8850be97ab0043",
+            "dup_a971239d944c42ab"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-005": {
+      "synthetic_file": "SYN_CONTRACT_005_PROC_MAT.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "苏州启明智能制造有限公司",
+          "search_needles": [
+            "苏州启明智能制造有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_16ce7ccedfb37dcf",
+            "dup_1f9e53fba5ff4b39",
+            "dup_2c44120d71988848",
+            "dup_3ab4f1d2667e7aec",
+            "dup_6e66d2e1c29af6bb",
+            "dup_c6754d6f6c619f88",
+            "dup_ec08b6f18eac291c"
+          ],
+          "B_chunk_ids": [
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b",
+            "dup_a8b3b15ca4ad7619",
+            "dup_c0170ffb13379c85",
+            "dup_f7ba27a6a63bd844"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "深圳海岳供应链有限公司",
+          "search_needles": [
+            "深圳海岳供应链有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_16ce7ccedfb37dcf",
+            "dup_1f9e53fba5ff4b39",
+            "dup_2c44120d71988848",
+            "dup_3ab4f1d2667e7aec",
+            "dup_6e66d2e1c29af6bb",
+            "dup_c6754d6f6c619f88",
+            "dup_c7aa9fde095a2bd6",
+            "dup_ec08b6f18eac291c"
+          ],
+          "B_chunk_ids": [
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b",
+            "dup_a8b3b15ca4ad7619",
+            "dup_c0170ffb13379c85",
+            "dup_f7ba27a6a63bd844"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "1,200,000元",
+          "search_needles": [
+            "1,200,000元",
+            "1,200,000",
+            "1,200,000",
+            "1200000"
+          ],
+          "A_chunk_ids": [
+            "dup_2c44120d71988848",
+            "dup_6e66d2e1c29af6bb",
+            "dup_b49639c5c5acb263",
+            "dup_c7aa9fde095a2bd6",
+            "dup_ec08b6f18eac291c"
+          ],
+          "B_chunk_ids": [
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b",
+            "dup_a8b3b15ca4ad7619"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-05-08",
+          "search_needles": [
+            "2026-05-08",
+            "2026年5月8日"
+          ],
+          "A_chunk_ids": [
+            "dup_3ab4f1d2667e7aec",
+            "dup_6e66d2e1c29af6bb",
+            "dup_c7aa9fde095a2bd6"
+          ],
+          "B_chunk_ids": [
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2027-05-31",
+          "search_needles": [
+            "2027-05-31",
+            "2027年5月31日"
+          ],
+          "A_chunk_ids": [
+            "dup_2bbe5811eed639e4",
+            "dup_3ab4f1d2667e7aec",
+            "dup_6e66d2e1c29af6bb",
+            "dup_c7aa9fde095a2bd6"
+          ],
+          "B_chunk_ids": [
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b",
+            "dup_87c0067cae0d7a57"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由苏州工业园区人民法院管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由苏州工业园区人民法院管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_3ab4f1d2667e7aec",
+            "dup_c7aa9fde095a2bd6",
+            "dup_ec08b6f18eac291c"
+          ],
+          "B_chunk_ids": [
+            "dup_47e1ca2f9c33d000",
+            "dup_a8b3b15ca4ad7619"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "QM-HY-SYN-2026-0508-005",
+          "search_needles": [
+            "QM-HY-SYN-2026-0508-005"
+          ],
+          "A_chunk_ids": [
+            "dup_16ce7ccedfb37dcf",
+            "dup_2c44120d71988848",
+            "dup_3ab4f1d2667e7aec",
+            "dup_6e66d2e1c29af6bb",
+            "dup_c6754d6f6c619f88",
+            "dup_ec08b6f18eac291c"
+          ],
+          "B_chunk_ids": [
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b",
+            "dup_a8b3b15ca4ad7619",
+            "dup_c0170ffb13379c85",
+            "dup_f7ba27a6a63bd844"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_3ab4f1d2667e7aec",
+            "dup_c7aa9fde095a2bd6"
+          ],
+          "B_chunk_ids": [
+            "dup_7a4813152e99c17b"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "13%",
+          "search_needles": [
+            "13%",
+            "13%",
+            "0.13"
+          ],
+          "A_chunk_ids": [
+            "dup_6e66d2e1c29af6bb",
+            "dup_c7aa9fde095a2bd6",
+            "dup_ec08b6f18eac291c"
+          ],
+          "B_chunk_ids": [
+            "dup_47e1ca2f9c33d000",
+            "dup_56d8c31362750641",
+            "dup_7a4813152e99c17b",
+            "dup_a8b3b15ca4ad7619"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "每月25日对账；月结45天；甲方收到乙方增值税专用发票（税率13%）无误后，以电汇转账支付当月货款。",
+          "search_needles": [
+            "每月25日对账；月结45天；甲方收到乙方增值税专用发票（税率13%）无误后，以电汇转账支付当月货款。"
+          ],
+          "A_chunk_ids": [
+            "dup_6e66d2e1c29af6bb",
+            "dup_c7aa9fde095a2bd6"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-006": {
+      "synthetic_file": "SYN_CONTRACT_006_PROC_MAT.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "苏州启明智能制造有限公司",
+          "search_needles": [
+            "苏州启明智能制造有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_323c9e92ae98f41f",
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_4d5c53200e108c16",
+            "dup_6b418455bb632193",
+            "dup_a0663042e0a77072",
+            "dup_faf45d1d07addaf4"
+          ],
+          "B_chunk_ids": [
+            "dup_33bdc7b6e6929bc9",
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea",
+            "dup_b585e10625388440",
+            "dup_f2e91ad2489f065f"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "深圳海岳供应链有限公司",
+          "search_needles": [
+            "深圳海岳供应链有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_323c9e92ae98f41f",
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_4d5c53200e108c16",
+            "dup_6b418455bb632193",
+            "dup_faf45d1d07addaf4"
+          ],
+          "B_chunk_ids": [
+            "dup_33bdc7b6e6929bc9",
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea",
+            "dup_b585e10625388440",
+            "dup_f2e91ad2489f065f"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "1,250,000元",
+          "search_needles": [
+            "1,250,000元",
+            "1,250,000",
+            "1,250,000",
+            "1250000"
+          ],
+          "A_chunk_ids": [
+            "dup_2d643f352db92fb9",
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_6b418455bb632193"
+          ],
+          "B_chunk_ids": [
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea",
+            "dup_b585e10625388440"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-05-15",
+          "search_needles": [
+            "2026-05-15",
+            "2026年5月15日"
+          ],
+          "A_chunk_ids": [
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9"
+          ],
+          "B_chunk_ids": [
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2027-06-30",
+          "search_needles": [
+            "2027-06-30",
+            "2027年6月30日"
+          ],
+          "A_chunk_ids": [
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_553358b9fd2d1d87"
+          ],
+          "B_chunk_ids": [
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea",
+            "dup_a5249e609053098b"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由深圳市南山区人民法院管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由深圳市南山区人民法院管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_90bdabdcc1c28435",
+            "dup_a0663042e0a77072"
+          ],
+          "B_chunk_ids": [
+            "dup_99e27ce0bd272852",
+            "dup_e09b072023bcfa74"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "QM-HY-SYN-2026-0515-006",
+          "search_needles": [
+            "QM-HY-SYN-2026-0515-006"
+          ],
+          "A_chunk_ids": [
+            "dup_323c9e92ae98f41f",
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_6b418455bb632193",
+            "dup_a0663042e0a77072",
+            "dup_faf45d1d07addaf4"
+          ],
+          "B_chunk_ids": [
+            "dup_33bdc7b6e6929bc9",
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea",
+            "dup_b585e10625388440",
+            "dup_f2e91ad2489f065f"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_33f4a0f10c9d5cc9"
+          ],
+          "B_chunk_ids": [
+            "dup_5321fa8471ff8eea"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "13%",
+          "search_needles": [
+            "13%",
+            "13%",
+            "0.13"
+          ],
+          "A_chunk_ids": [
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_90bdabdcc1c28435",
+            "dup_a0663042e0a77072"
+          ],
+          "B_chunk_ids": [
+            "dup_4ea297b57a5ca1cc",
+            "dup_5321fa8471ff8eea",
+            "dup_99e27ce0bd272852",
+            "dup_e09b072023bcfa74"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "每月28日对账；月结60天；甲方收到乙方增值税专用发票（税率13%）无误后，以电汇转账+银行承兑汇票(50%:50%)支付当月货款。",
+          "search_needles": [
+            "每月28日对账；月结60天；甲方收到乙方增值税专用发票（税率13%）无误后，以电汇转账+银行承兑汇票(50%:50%)支付当月货款。"
+          ],
+          "A_chunk_ids": [
+            "dup_33f2e1f902f59c8d",
+            "dup_33f4a0f10c9d5cc9",
+            "dup_a0663042e0a77072"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-007": {
+      "synthetic_file": "SYN_CONTRACT_007_SALE_AGRI.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "杭州云杉数据服务有限公司",
+          "search_needles": [
+            "杭州云杉数据服务有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_1d7d36106631a93d",
+            "dup_a02da2bec8b0dfff",
+            "dup_ca1712312eddebca",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_81fb7394fbd885bf",
+            "dup_9968516105a0646f",
+            "dup_e7e6ce7a3ee51694"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "成都远川工程管理有限公司",
+          "search_needles": [
+            "成都远川工程管理有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_1d7d36106631a93d",
+            "dup_a02da2bec8b0dfff",
+            "dup_ca1712312eddebca",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_81fb7394fbd885bf",
+            "dup_9968516105a0646f",
+            "dup_e7e6ce7a3ee51694"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "380,000元",
+          "search_needles": [
+            "380,000元",
+            "380,000",
+            "380,000",
+            "380000"
+          ],
+          "A_chunk_ids": [
+            "dup_1d7d36106631a93d",
+            "dup_6593af530c4b21b5",
+            "dup_a02da2bec8b0dfff",
+            "dup_bb28cf5e99f5bf80",
+            "dup_ca1712312eddebca",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_9968516105a0646f",
+            "dup_ce048d26a451a6b3",
+            "dup_dec9581424e8cba6",
+            "dup_e7e6ce7a3ee51694"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-03-20",
+          "search_needles": [
+            "2026-03-20",
+            "2026年3月20日"
+          ],
+          "A_chunk_ids": [
+            "dup_1d7d36106631a93d",
+            "dup_a02da2bec8b0dfff",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_9968516105a0646f",
+            "dup_dec9581424e8cba6"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2027-03-31",
+          "search_needles": [
+            "2027-03-31",
+            "2027年3月31日"
+          ],
+          "A_chunk_ids": [
+            "dup_1d7d36106631a93d",
+            "dup_a02da2bec8b0dfff",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_9968516105a0646f",
+            "dup_dec9581424e8cba6"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由杭州市余杭区人民法院诉讼管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由杭州市余杭区人民法院诉讼管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_73971a639ca8b93a",
+            "dup_a02da2bec8b0dfff",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_81fb7394fbd885bf",
+            "dup_dec9581424e8cba6"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "YS-YC-SYN-2026-0320-007",
+          "search_needles": [
+            "YS-YC-SYN-2026-0320-007"
+          ],
+          "A_chunk_ids": [
+            "dup_1d7d36106631a93d",
+            "dup_ca1712312eddebca",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_81fb7394fbd885bf",
+            "dup_9968516105a0646f",
+            "dup_e7e6ce7a3ee51694"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": [
+            "dup_dec9581424e8cba6"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "9%",
+          "search_needles": [
+            "9%",
+            "9%",
+            "0.09"
+          ],
+          "A_chunk_ids": [
+            "dup_73971a639ca8b93a",
+            "dup_a02da2bec8b0dfff"
+          ],
+          "B_chunk_ids": [
+            "dup_9968516105a0646f",
+            "dup_e7e6ce7a3ee51694"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "分期付款：合同生效后5日内甲方预付30%即114,000元；每批到货验收合格后7日内支付对应批次剩余70%货款；支付方式为公对公银行转账。",
+          "search_needles": [
+            "分期付款：合同生效后5日内甲方预付30%即114,000元；每批到货验收合格后7日内支付对应批次剩余70%货款；支付方式为公对公银行转账。"
+          ],
+          "A_chunk_ids": [
+            "dup_73971a639ca8b93a",
+            "dup_a02da2bec8b0dfff",
+            "dup_da7e9be45d172a6d"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-008": {
+      "synthetic_file": "SYN_CONTRACT_008_LEASE.docx",
+      "core_fields_covered": 9,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "上海星河科技有限公司",
+          "search_needles": [
+            "上海星河科技有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_151106d047aa1810",
+            "dup_2b9437ccf3fb9d01",
+            "dup_3154a77bce1b7c69",
+            "dup_afe8a958e488168e",
+            "dup_b3e7c6d6459f2cd9"
+          ],
+          "B_chunk_ids": [
+            "dup_46be3796d4b4fcc0",
+            "dup_ae035d78018e9cd5",
+            "dup_b6a74349b61f025e",
+            "dup_e1a1944e43343bb7"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "南京青禾信息技术有限公司",
+          "search_needles": [
+            "南京青禾信息技术有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_151106d047aa1810",
+            "dup_2b9437ccf3fb9d01",
+            "dup_3154a77bce1b7c69",
+            "dup_3a3c40d715eefb04",
+            "dup_afe8a958e488168e",
+            "dup_b3e7c6d6459f2cd9"
+          ],
+          "B_chunk_ids": [
+            "dup_46be3796d4b4fcc0",
+            "dup_ae035d78018e9cd5",
+            "dup_b6a74349b61f025e",
+            "dup_e1a1944e43343bb7"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "960,000元",
+          "search_needles": [
+            "960,000元",
+            "960,000",
+            "960,000",
+            "960000"
+          ],
+          "A_chunk_ids": [
+            "dup_227e828eb4f7b74a",
+            "dup_2b9437ccf3fb9d01",
+            "dup_3154a77bce1b7c69",
+            "dup_b3e7c6d6459f2cd9"
+          ],
+          "B_chunk_ids": [
+            "dup_ae035d78018e9cd5",
+            "dup_b6a74349b61f025e",
+            "dup_e1a1944e43343bb7"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-04-10",
+          "search_needles": [
+            "2026-04-10",
+            "2026年4月10日"
+          ],
+          "A_chunk_ids": [
+            "dup_2b9437ccf3fb9d01",
+            "dup_3154a77bce1b7c69"
+          ],
+          "B_chunk_ids": [
+            "dup_ae035d78018e9cd5",
+            "dup_b6a74349b61f025e"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2028-05-14",
+          "search_needles": [
+            "2028-05-14",
+            "2028年5月14日"
+          ],
+          "A_chunk_ids": [
+            "dup_227e828eb4f7b74a",
+            "dup_2b9437ccf3fb9d01",
+            "dup_3154a77bce1b7c69"
+          ],
+          "B_chunk_ids": [
+            "dup_ae035d78018e9cd5",
+            "dup_b6a74349b61f025e"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由上海市徐汇区人民法院诉讼管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由上海市徐汇区人民法院诉讼管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_227e828eb4f7b74a",
+            "dup_cfad237709ee01c3"
+          ],
+          "B_chunk_ids": [
+            "dup_09e6e60e61f4dd89",
+            "dup_108c97242a9032fa"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "XH-QH-SYN-2026-0410-008",
+          "search_needles": [
+            "XH-QH-SYN-2026-0410-008"
+          ],
+          "A_chunk_ids": [
+            "dup_2b9437ccf3fb9d01",
+            "dup_3154a77bce1b7c69",
+            "dup_b3e7c6d6459f2cd9"
+          ],
+          "B_chunk_ids": [
+            "dup_ae035d78018e9cd5",
+            "dup_b6a74349b61f025e",
+            "dup_e1a1944e43343bb7"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_2b9437ccf3fb9d01",
+            "dup_cfad237709ee01c3"
+          ],
+          "B_chunk_ids": [
+            "dup_ae035d78018e9cd5"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "",
+          "search_needles": [],
+          "A_chunk_ids": [],
+          "B_chunk_ids": []
+        },
+        "payment_terms": {
+          "ground_truth_display": "押二付三；首期租金（三个月）360,000元 + 押金两个月160,000元 = 合计520,000元于签署后5日内支付；后续每3个月首月5日前支付季度租金120,000元。",
+          "search_needles": [
+            "押二付三；首期租金（三个月）360,000元 + 押金两个月160,000元 = 合计520,000元于签署后5日内支付；后续每3个月首月5日前支付季度租金120,000元。"
+          ],
+          "A_chunk_ids": [
+            "dup_227e828eb4f7b74a",
+            "dup_2b9437ccf3fb9d01",
+            "dup_cfad237709ee01c3"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-009": {
+      "synthetic_file": "SYN_CONTRACT_009_EPC.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "成都远川工程管理有限公司",
+          "search_needles": [
+            "成都远川工程管理有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_4fda97c9555a0f00",
+            "dup_e303587125bf759f",
+            "dup_f295ec079dee7b71"
+          ],
+          "B_chunk_ids": [
+            "dup_3655131e15ad1686",
+            "dup_6571c9e8c567237d",
+            "dup_bd94df489b686056",
+            "dup_de116780544b0d40"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "苏州启明智能制造有限公司",
+          "search_needles": [
+            "苏州启明智能制造有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_4fda97c9555a0f00",
+            "dup_b2a3c26743e2a172",
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": [
+            "dup_3655131e15ad1686",
+            "dup_6571c9e8c567237d",
+            "dup_bd94df489b686056",
+            "dup_de116780544b0d40"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "12,000,000元",
+          "search_needles": [
+            "12,000,000元",
+            "12,000,000",
+            "12,000,000",
+            "12000000"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_4fda97c9555a0f00",
+            "dup_620ce472c198a398",
+            "dup_9cb62ce111b2547c",
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": [
+            "dup_55c8ae0330d05353",
+            "dup_6571c9e8c567237d",
+            "dup_de116780544b0d40"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-05-20",
+          "search_needles": [
+            "2026-05-20",
+            "2026年5月20日"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_706a8e0765608512",
+            "dup_b2a3c26743e2a172",
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": [
+            "dup_55c8ae0330d05353",
+            "dup_6571c9e8c567237d",
+            "dup_bd94df489b686056"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2030-03-31",
+          "search_needles": [
+            "2030-03-31",
+            "2030年3月31日"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": [
+            "dup_55c8ae0330d05353",
+            "dup_6571c9e8c567237d"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，提交成都仲裁委员会按其工程争议仲裁规则解决。",
+          "search_needles": [
+            "因本合同发生之争议，提交成都仲裁委员会按其工程争议仲裁规则解决。"
+          ],
+          "A_chunk_ids": [
+            "dup_620ce472c198a398",
+            "dup_9cb62ce111b2547c"
+          ],
+          "B_chunk_ids": [
+            "dup_3655131e15ad1686",
+            "dup_55c8ae0330d05353"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "YC-QM-SYN-2026-0520-009",
+          "search_needles": [
+            "YC-QM-SYN-2026-0520-009"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_4fda97c9555a0f00",
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": [
+            "dup_3655131e15ad1686",
+            "dup_6571c9e8c567237d",
+            "dup_de116780544b0d40"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "不自动续约",
+          "search_needles": [
+            "不自动续约",
+            "不自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": [
+            "dup_55c8ae0330d05353"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "9%",
+          "search_needles": [
+            "9%",
+            "9%",
+            "0.09"
+          ],
+          "A_chunk_ids": [
+            "dup_2dd502496c0ccb2a",
+            "dup_4fda97c9555a0f00",
+            "dup_620ce472c198a398",
+            "dup_9cb62ce111b2547c"
+          ],
+          "B_chunk_ids": [
+            "dup_6571c9e8c567237d",
+            "dup_de116780544b0d40"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "签约合同价含税12,000,000元；签约后10日内付10%预付款=1,200,000元；按月计量进度款（当月审核后30日内付至80%）；竣工验收合格后付至90%；结算审计完成后付至97%；3%质保金于缺陷责任期满24个月后无息返还。",
+          "search_needles": [
+            "签约合同价含税12,000,000元；签约后10日内付10%预付款=1,200,000元；按月计量进度款（当月审核后30日内付至80%）；竣工验收合格后付至90%；结算审计完成后付至97%；3%质保金于缺陷责任期满24个月后无息返还。"
+          ],
+          "A_chunk_ids": [
+            "dup_620ce472c198a398",
+            "dup_9cb62ce111b2547c",
+            "dup_e303587125bf759f"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    },
+    "SYN-010": {
+      "synthetic_file": "SYN_CONTRACT_010_ENTRUST.docx",
+      "core_fields_covered": 10,
+      "core_fields_total": 10,
+      "fields": {
+        "party_a.name": {
+          "ground_truth_display": "深圳海岳供应链有限公司",
+          "search_needles": [
+            "深圳海岳供应链有限公司"
+          ],
+          "A_chunk_ids": [
+            "dup_134f8f076f009225",
+            "dup_3085ef15ac890172",
+            "dup_4d1684c7f76743b1",
+            "dup_7b5cddd19ef2a387",
+            "dup_eebbacd40ebf9ad3",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0",
+            "dup_18b288214abf2acb"
+          ]
+        },
+        "party_b.name": {
+          "ground_truth_display": "上海星河科技有限公司法务咨询分公司",
+          "search_needles": [
+            "上海星河科技有限公司法务咨询分公司"
+          ],
+          "A_chunk_ids": [
+            "dup_134f8f076f009225",
+            "dup_3085ef15ac890172",
+            "dup_4d1684c7f76743b1",
+            "dup_7b5cddd19ef2a387",
+            "dup_eebbacd40ebf9ad3",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0",
+            "dup_18b288214abf2acb"
+          ]
+        },
+        "amount": {
+          "ground_truth_display": "220,000元",
+          "search_needles": [
+            "220,000元",
+            "220,000",
+            "220,000",
+            "220000"
+          ],
+          "A_chunk_ids": [
+            "dup_134f8f076f009225",
+            "dup_3085ef15ac890172",
+            "dup_78a325df6ac8b7fe",
+            "dup_7b5cddd19ef2a387",
+            "dup_eebbacd40ebf9ad3"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0",
+            "dup_18b288214abf2acb",
+            "dup_5f821078100d4711"
+          ]
+        },
+        "sign_date": {
+          "ground_truth_display": "2026-03-28",
+          "search_needles": [
+            "2026-03-28",
+            "2026年3月28日"
+          ],
+          "A_chunk_ids": [
+            "dup_3085ef15ac890172",
+            "dup_7b5cddd19ef2a387",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0"
+          ]
+        },
+        "expiry_date": {
+          "ground_truth_display": "2027-03-31",
+          "search_needles": [
+            "2027-03-31",
+            "2027年3月31日"
+          ],
+          "A_chunk_ids": [
+            "dup_3085ef15ac890172",
+            "dup_7b5cddd19ef2a387",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0"
+          ]
+        },
+        "governing_or_dispute_resolution": {
+          "ground_truth_display": "因本合同发生之争议，由深圳前海合作区人民法院诉讼管辖。",
+          "search_needles": [
+            "因本合同发生之争议，由深圳前海合作区人民法院诉讼管辖。"
+          ],
+          "A_chunk_ids": [
+            "dup_eebbacd40ebf9ad3",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_1463cdfc18f4efe0",
+            "dup_d4a523780fe36360"
+          ]
+        },
+        "contract_number": {
+          "ground_truth_display": "HY-XHFL-SYN-2026-0328-010",
+          "search_needles": [
+            "HY-XHFL-SYN-2026-0328-010"
+          ],
+          "A_chunk_ids": [
+            "dup_134f8f076f009225",
+            "dup_7b5cddd19ef2a387",
+            "dup_eebbacd40ebf9ad3",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0",
+            "dup_18b288214abf2acb"
+          ]
+        },
+        "auto_renewal": {
+          "ground_truth_display": "自动续约",
+          "search_needles": [
+            "自动续约",
+            "自动续期"
+          ],
+          "A_chunk_ids": [
+            "dup_3085ef15ac890172",
+            "dup_7b5cddd19ef2a387",
+            "dup_eebbacd40ebf9ad3",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0"
+          ]
+        },
+        "tax_rate": {
+          "ground_truth_display": "6%",
+          "search_needles": [
+            "6%",
+            "6%",
+            "0.06"
+          ],
+          "A_chunk_ids": [
+            "dup_3085ef15ac890172",
+            "dup_7b5cddd19ef2a387",
+            "dup_eebbacd40ebf9ad3",
+            "dup_fd2282b1622cd56d"
+          ],
+          "B_chunk_ids": [
+            "dup_08e15ed7843367fa",
+            "dup_1463cdfc18f4efe0",
+            "dup_18b288214abf2acb"
+          ]
+        },
+        "payment_terms": {
+          "ground_truth_display": "基础代理费220,000元于合同生效后10日内支付；风险代理费按乙方实际协助回款金额的8%计提，回款到账后15日内支付；乙方开具6%增值税专用发票。",
+          "search_needles": [
+            "基础代理费220,000元于合同生效后10日内支付；风险代理费按乙方实际协助回款金额的8%计提，回款到账后15日内支付；乙方开具6%增值税专用发票。"
+          ],
+          "A_chunk_ids": [
+            "dup_3085ef15ac890172",
+            "dup_7b5cddd19ef2a387"
+          ],
+          "B_chunk_ids": []
+        }
+      }
+    }
+  }
+}

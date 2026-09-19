@@ -1,0 +1,72 @@
+{
+  "status": "OK",
+  "manifest": {
+    "version": 1,
+    "seed": 20260821,
+    "embedding_model_path": "D:\\xiaoyi\\Legal_System\\models\\bge-m3",
+    "embedding_dimension": 1024,
+    "normalize_embeddings": true,
+    "device": "cpu",
+    "batch_size": 16,
+    "build_start_ts": 1787280377.2491865,
+    "build_elapsed_seconds": 5626.306750297546,
+    "vectors_a_count": 2250,
+    "vectors_b_count": 4599,
+    "query_count": 100,
+    "l2_norm_check": {
+      "a_max_err": 1.7881393432617188e-07,
+      "b_max_err": 1.1920928955078125e-07,
+      "q_max_err": 1.1920928955078125e-07
+    },
+    "source_files": {
+      "corpus_a": {
+        "path": "F:\\DataBase\\trae_work\\RAG_小号\\retrieval_eval_v1\\offline_embedding_index\\corpus_strategy_a.json",
+        "sha256": "5173fb895044a2d041bac99199e3fec00f25efd4ae1f6b59d6ee8f6085ec5cea",
+        "exists": true,
+        "size": 4284464,
+        "mtime": 1787280172.1966627
+      },
+      "corpus_b": {
+        "path": "F:\\DataBase\\trae_work\\RAG_小号\\retrieval_eval_v1\\offline_embedding_index\\corpus_strategy_b.json",
+        "sha256": "747f9869abab0a4fd6772eff2ab525a4bcfcfc244cc7c2b46746448aaf03fdb6",
+        "exists": true,
+        "size": 4466596,
+        "mtime": 1787280172.3315468
+      },
+      "canon_a_chunks_json": {
+        "path": "F:\\DataBase\\trae_work\\RAG_小号\\chunking_strategy_v2\\strategy_a_chunks.json",
+        "sha256": "bd2010cbc0ebb5f09289ad856318ea743b5de1fbc8eb7f8ac90e6d9703617d83",
+        "exists": true,
+        "size": 8063354,
+        "mtime": 1787278273.9807134
+      },
+      "canon_b_chunks_json": {
+        "path": "F:\\DataBase\\trae_work\\RAG_小号\\chunking_strategy_v2\\strategy_b_chunks.json",
+        "sha256": "f7877ef1ff246aedb12f657a778a6b57d81a7e046480558496103b5aba2b5045",
+        "exists": true,
+        "size": 14313090,
+        "mtime": 1787278274.8676407
+      },
+      "syn_docx_files": [
+        "SYN_CONTRACT_001_DATA_PROC.docx",
+        "SYN_CONTRACT_002_DATA_PROC.docx",
+        "SYN_CONTRACT_003_DATA_AGENCY.docx",
+        "SYN_CONTRACT_004_DATA_AGENCY.docx",
+        "SYN_CONTRACT_005_PROC_MAT.docx",
+        "SYN_CONTRACT_006_PROC_MAT.docx",
+        "SYN_CONTRACT_007_SALE_AGRI.docx",
+        "SYN_CONTRACT_008_LEASE.docx",
+        "SYN_CONTRACT_009_EPC.docx",
+        "SYN_CONTRACT_010_ENTRUST.docx"
+      ]
+    },
+    "forbidden_modules_at_build": {
+      "modules.milvus_store": false,
+      "modules.database": false,
+      "modules.cache": false,
+      "modules.rerank": false,
+      "modules.rag.hybrid_rrf": false,
+      "pymilvus": false
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "run_metadata": {
+    "seed": 20260821,
+    "timestamp": "2026-08-21T12:25:02",
+    "elapsed_retrieval_seconds": 0.831688642501831
+  },
+  "queries_summary": {
+    "total": 100,
+    "contract_fact": 50,
+    "legal_clause": 50,
+    "dimension_distribution": {
+      "contract_amount": 6,
+      "party_info": 5,
+      "sign_dates": 6,
+      "breach_terms": 5,
+      "tax_rate": 5,
+      "auto_renewal": 5,
+      "payment_terms": 4,
+      "governing_law": 5,
+      "termination_notice": 4,
+      "product_qty": 5
+    },
+    "law_distribution": {
+      "LAW_008": 9,
+      "LAW_009": 3,
+      "LAW_010": 2,
+      "LAW_007": 16,
+      "LAW_004": 1,
+      "LAW_005": 1,
+      "LAW_006": 1,
+      "LAW_001": 13,
+      "LAW_002": 2,
+      "LAW_003": 1,
+      "DATA_002": 1
+    },
+    "difficulty_distribution": {
+      "easy": 30,
+      "hard": 15,
+      "medium": 55
+    },
+    "citation_evidence_fallback_rate": 0.05,
+    "queries_with_ce_hit_top10": 83,
+    "queries_with_ce_hit_all_fallback_top10": 5
+  },
+  "embedding_summary": {
+    "path": "D:\\xiaoyi\\Legal_System\\models\\bge-m3",
+    "dimension": 1024,
+    "normalize_embeddings": true,
+    "device": "cpu",
+    "build_time_seconds": 5626.306750297546,
+    "counts": {
+      "A": 2250,
+      "B": 4599,
+      "Q": 100
+    }
+  },
+  "strategy_ab_metrics": [
+    {
+      "STRATEGY": "A",
+      "QUERY_SCOPE": "ALL",
+      "NUM_QUERIES": 100,
+      "HIT_RATE@5": "0.660000",
+      "RECALL@5": "0.660000",
+      "HIT_RATE@10": "0.770000",
+      "RECALL@10": "0.770000",
+      "MRR@10": "0.415456",
+      "CITATION_EV_HIT_RATE@10": "0.770000"
+    },
+    {
+      "STRATEGY": "A",
+      "QUERY_SCOPE": "CONTRACT_FACT",
+      "NUM_QUERIES": 50,
+      "HIT_RATE@5": "0.380000",
+      "RECALL@5": "0.380000",
+      "HIT_RATE@10": "0.560000",
+      "RECALL@10": "0.560000",
+      "MRR@10": "0.199913",
+      "CITATION_EV_HIT_RATE@10": "0.560000"
+    },
+    {
+      "STRATEGY": "A",
+      "QUERY_SCOPE": "LEGAL_CLAUSE",
+      "NUM_QUERIES": 50,
+      "HIT_RATE@5": "0.940000",
+      "RECALL@5": "0.940000",
+      "HIT_RATE@10": "0.980000",
+      "RECALL@10": "0.980000",
+      "MRR@10": "0.631000",
+      "CITATION_EV_HIT_RATE@10": "0.980000"
+    },
+    {
+      "STRATEGY": "B",
+      "QUERY_SCOPE": "ALL",
+      "NUM_QUERIES": 100,
+      "HIT_RATE@5": "0.680000",
+      "RECALL@5": "0.680000",
+      "HIT_RATE@10": "0.780000",
+      "RECALL@10": "0.780000",
+      "MRR@10": "0.536381",
+      "CITATION_EV_HIT_RATE@10": "0.780000"
+    },
+    {
+      "STRATEGY": "B",
+      "QUERY_SCOPE": "CONTRACT_FACT",
+      "NUM_QUERIES": 50,
+      "HIT_RATE@5": "0.440000",
+      "RECALL@5": "0.440000",
+      "HIT_RATE@10": "0.580000",
+      "RECALL@10": "0.580000",
+      "MRR@10": "0.302762",
+      "CITATION_EV_HIT_RATE@10": "0.580000"
+    },
+    {
+      "STRATEGY": "B",
+      "QUERY_SCOPE": "LEGAL_CLAUSE",
+      "NUM_QUERIES": 50,
+      "HIT_RATE@5": "0.920000",
+      "RECALL@5": "0.920000",
+      "HIT_RATE@10": "0.980000",
+      "RECALL@10": "0.980000",
+      "MRR@10": "0.770000",
+      "CITATION_EV_HIT_RATE@10": "0.980000"
+    }
+  ],
+  "strategy_compare": {
+    "RECALL@10": {
+      "delta_B_minus_A_mean": 0.008570000000000001,
+      "ci_95_low": -0.06000000000000005,
+      "ci_95_high": 0.07999999999999996,
+      "R": 1000,
+      "seed": 20260821
+    },
+    "MRR@10": {
+      "delta_B_minus_A_mean": 0.12148693253968254,
+      "ci_95_low": 0.049551488095238114,
+      "ci_95_high": 0.19440783730158734,
+      "R": 1000,
+      "seed": 20260821
+    },
+    "CITATION_EV_HIT_RATE@10": {
+      "delta_B_minus_A_mean": 0.01157,
+      "ci_95_low": -0.04999999999999993,
+      "ci_95_high": 0.07000000000000006,
+      "R": 1000,
+      "seed": 20260821
+    }
+  },
+  "gate_result": "PASS",
+  "REVIEW_REQUIRED": false,
+  "gate_reason": "",
+  "evidence_links": {
+    "retrieval_questions": "retrieval_eval_v1\\retrieval_questions.jsonl",
+    "retrieval_query_results_csv": "retrieval_eval_v1\\retrieval_query_results.csv",
+    "retrieval_ab_metrics_csv": "retrieval_eval_v1\\retrieval_ab_metrics.csv",
+    "offline_embedding_index": "retrieval_eval_v1\\offline_embedding_index\\index_manifest.json",
+    "failure_samples_json": "retrieval_eval_v1\\failure_samples.json",
+    "report_md": "retrieval_eval_v1\\retrieval_eval_v1.md"
+  },
+  "frozen_boundaries": {
+    "milvus_imported": false,
+    "mysql_imported": false,
+    "redis_imported": false,
+    "rerank_imported": false,
+    "hybrid_imported": false,
+    "upstream_patch_applied": false
+  }
+}

@@ -1,0 +1,60 @@
+field_name,layer,type,required,nullable,source_owner,filter_candidate,citation_relevant,embedding_policy,description
+chunk_id,A_IDENTITY,STRING,True,False,DERIVED_DETERMINISTIC,FILTER_SCALAR_CANDIDATE,False,CITATION_ONLY,Deterministic chunk identifier = SHA256(CMCV1|source_sha256|document_id|chunk_index|obo_start|obo_end)[:32]
+document_id,A_IDENTITY,STRING,True,False,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,CITATION_ONLY,ParsedDocument.document_id frozen technical ingestion identity
+logical_document_id,A_IDENTITY,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,CITATION_ONLY,Reserved version-group identity; Metadata Contract V1 INTERNAL_AUDIT_ONLY at V1
+source_file,A_IDENTITY,STRING,True,False,PARSER,FILTER_SCALAR_CANDIDATE,False,RETRIEVAL_FILTER_ONLY,Local filesystem path / original filename frozen from ParsedDocument V2
+source_sha256,A_IDENTITY,STRING,True,False,DERIVED_DETERMINISTIC,FILTER_SCALAR_CANDIDATE,False,CITATION_ONLY,SHA256 hash of original source bytes; 64 hex chars
+source_format,A_IDENTITY,STRING,True,False,PARSER,FILTER_SCALAR_CANDIDATE,False,RETRIEVAL_FILTER_ONLY,Source document format: md | pdf | docx | html | txt
+chunk_index,A_IDENTITY,INTEGER,True,False,CHUNKER,FILTER_SCALAR_CANDIDATE,False,NEVER_EMBED,0-based ordinal of this chunk within its document
+title,B_DOCUMENT_METADATA,STRING,True,True,METADATA_NORMALIZER,JSON_AUXILIARY,True,OPTIONAL_CONTEXT_PREFIX,Official document display title from Metadata Contract V1
+source_org,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,OPTIONAL_CONTEXT_PREFIX,Issuing organization / 发文机关 frozen from Metadata Contract V1
+publish_date,B_DOCUMENT_METADATA,DATE,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,RETRIEVAL_FILTER_ONLY,发布日期 YYYY-MM-DD frozen from Metadata Contract V1
+creation_date,B_DOCUMENT_METADATA,DATE,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,RETRIEVAL_FILTER_ONLY,成文日期 YYYY-MM-DD frozen from Metadata Contract V1
+effective_date,B_DOCUMENT_METADATA,DATE,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,RETRIEVAL_FILTER_ONLY,施行日期 YYYY-MM-DD frozen from Metadata Contract V1
+expiry_date,B_DOCUMENT_METADATA,DATE,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,RETRIEVAL_FILTER_ONLY,废止日期 YYYY-MM-DD frozen from Metadata Contract V1
+document_number,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,CITATION_ONLY,Legal citation 发文字号 frozen from Metadata Contract V1
+document_index_number,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,JSON_AUXILIARY,False,CITATION_ONLY,Government 索引号 frozen from Metadata Contract V1
+document_type,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,RETRIEVAL_FILTER_ONLY,文件类型 category frozen from Metadata Contract V1
+authority_level,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,JSON_AUXILIARY,True,OPTIONAL_CONTEXT_PREFIX,效力级别 frozen from Metadata Contract V1 (CITATION_ONLY disposition at V1)
+legal_status,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,JSON_AUXILIARY,True,RETRIEVAL_FILTER_ONLY,法律状态 frozen from Metadata Contract V1 (CITATION_ONLY disposition at V1)
+jurisdiction,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,True,RETRIEVAL_FILTER_ONLY,适用地域 frozen from Metadata Contract V1
+region,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,False,RETRIEVAL_FILTER_ONLY,地区/地域标签 frozen from Metadata Contract V1
+theme_category,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,FILTER_SCALAR_CANDIDATE,False,RETRIEVAL_FILTER_ONLY,主题分类 frozen from Metadata Contract V1
+source_url,B_DOCUMENT_METADATA,STRING,False,True,METADATA_NORMALIZER,JSON_AUXILIARY,False,CITATION_ONLY,Original source URL frozen from Metadata Contract V1
+contract_version,B_DOCUMENT_METADATA,STRING,True,False,DERIVED_DETERMINISTIC,NOT_FILTERED,False,NEVER_EMBED,"CHUNK_METADATA_CONTRACT_V1.0 frozen tag"
+structural,C_STRUCTURAL,COMPOUND,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,ChunkStructuralContext compound (chapter/section/article/heading_path/heading_level/block_type/content_type)
+structural.chapter,C_STRUCTURAL,STRING,False,True,CHUNKER,FILTER_SCALAR_CANDIDATE,False,OPTIONAL_CONTEXT_PREFIX,Top-level structural label (章 / chapter) — finally promoted at Chunk stage
+structural.section,C_STRUCTURAL,STRING,False,True,CHUNKER,FILTER_SCALAR_CANDIDATE,False,OPTIONAL_CONTEXT_PREFIX,Mid-level structural label (节 / section) — Chunk-level only
+structural.article,C_STRUCTURAL,STRING,False,True,CHUNKER,FILTER_SCALAR_CANDIDATE,False,OPTIONAL_CONTEXT_PREFIX,Low-level unit (条 / article) — finally promoted at Chunk stage
+structural.heading_path,C_STRUCTURAL,STRING_LIST,False,False,CHUNKER,JSON_AUXILIARY,False,OPTIONAL_CONTEXT_PREFIX,Hierarchical heading context from outer (top) to inner (closest) heading
+structural.heading_level,C_STRUCTURAL,INTEGER,False,True,CHUNKER,JSON_AUXILIARY,False,OPTIONAL_CONTEXT_PREFIX,Closest enclosing heading level 1..9 or null
+structural.block_type,C_STRUCTURAL,STRING,False,True,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,Dominant ParsedDocument V2 block_type vocabulary: HEADING/PARAGRAPH/LIST_ITEM/TABLE/METADATA/UNKNOWN
+structural.content_type,C_STRUCTURAL,STRING,False,True,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,Coarse content classification: LEGAL_TEXT/HEADING_ONLY/TABLE_ONLY/MIXED_TEXT_TABLE/METADATA_SEGMENT/REVIEW_CONTENT/UNKNOWN
+provenance,D_PROVENANCE,COMPOUND,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,ChunkProvenance compound (source_block_orders/ids/pages/parser)
+provenance.source_block_orders,D_PROVENANCE,INTEGER_LIST,True,False,PARSER,JSON_AUXILIARY,False,NEVER_EMBED,Original ParsedDocument V2 block orders intersected by this chunk — strictly monotonic, unique
+provenance.source_block_ids,D_PROVENANCE,STRING_LIST,False,False,PARSER,JSON_AUXILIARY,False,NEVER_EMBED,Original ParsedDocument V2 block ids (document_id_b000N pattern); 1:1 with block_orders if non-empty
+provenance.page_start,D_PROVENANCE,INTEGER,False,True,PARSER,FILTER_SCALAR_CANDIDATE,False,CITATION_ONLY,First 1-based page number intersecting this chunk; null for formats without pages
+provenance.page_end,D_PROVENANCE,INTEGER,False,True,PARSER,FILTER_SCALAR_CANDIDATE,False,CITATION_ONLY,Last 1-based page number intersecting this chunk; null for formats without pages
+provenance.page_numbers,D_PROVENANCE,INTEGER_LIST,False,False,PARSER,JSON_AUXILIARY,False,CITATION_ONLY,Exact page numbers covered; must be subset of [page_start, page_end]
+provenance.original_block_order_start,D_PROVENANCE,INTEGER,True,False,PARSER,JSON_AUXILIARY,False,NEVER_EMBED,min(source_block_orders); set automatically by ChunkProvenance
+provenance.original_block_order_end,D_PROVENANCE,INTEGER,True,False,PARSER,JSON_AUXILIARY,False,NEVER_EMBED,max(source_block_orders); set automatically by ChunkProvenance
+provenance.parser_name,D_PROVENANCE,STRING,False,False,PARSER,NOT_FILTERED,False,CITATION_ONLY,ParsedDocument V2 parser_name frozen attribute
+provenance.parser_version,D_PROVENANCE,STRING,False,False,PARSER,NOT_FILTERED,False,CITATION_ONLY,ParsedDocument V2 parser_version frozen attribute
+table_context,E_RETRIEVAL_RUNTIME,COMPOUND,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,ChunkTableContext compound (TABLE lineage fields for chunks that intersect TABLE blocks)
+table_context.contains_table,E_RETRIEVAL_RUNTIME,BOOLEAN,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,True if the chunk intersects any TABLE-type ParsedDocument V2 blocks
+table_context.table_ids,E_RETRIEVAL_RUNTIME,STRING_LIST,False,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,Source table block ids; must be set when contains_table=True (or set source_table_block_orders)
+table_context.source_table_block_orders,E_RETRIEVAL_RUNTIME,INTEGER_LIST,False,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,Source TABLE block orders; strictly monotonic unique; MUST be subset of provenance.source_block_orders
+table_context.table_header_preserved,E_RETRIEVAL_RUNTIME,BOOLEAN,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,True if chunk replicates the TABLE header for standalone readability
+table_context.table_structure_preserved,E_RETRIEVAL_RUNTIME,BOOLEAN,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,True only if chunk carries authoritative structured TableData; textual table fragments get False
+table_context.table_part_index,E_RETRIEVAL_RUNTIME,INTEGER,False,True,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,0-based part number when one TABLE is split into multiple chunks
+table_context.table_parts_total,E_RETRIEVAL_RUNTIME,INTEGER,False,True,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,Total part count when a TABLE is split into multiple chunks
+parent_child,E_RETRIEVAL_RUNTIME,COMPOUND,True,False,CHUNKER,JSON_AUXILIARY,False,NEVER_EMBED,ChunkParentChildInfo compound (future Parent/Child strategy compatibility; no schema rewrite)
+parent_child.parent_chunk_id,E_RETRIEVAL_RUNTIME,STRING,False,True,CHUNKER,NOT_FILTERED,False,NEVER_EMBED,Chunk that encloses/parents this chunk; 32-hex chunk_id format
+parent_child.chunk_level,E_RETRIEVAL_RUNTIME,ENUM,False,True,CHUNKER,NOT_FILTERED,False,NEVER_EMBED,PARENT | CHILD | ATOMIC; frozen enum values; schema-stable for strategy changes
+parent_child.parent_document_id,E_RETRIEVAL_RUNTIME,STRING,False,True,CHUNKER,NOT_FILTERED,False,CITATION_ONLY,Cross-document parent document id (rare); normally same-document parent uses parent_chunk_id
+quality,E_RETRIEVAL_RUNTIME,COMPOUND,True,False,QGATE,JSON_AUXILIARY,False,NEVER_EMBED,ChunkQualityFlags compound (QGate/review lineage; metadata, never embedded legal text)
+quality.quality_verdict,E_RETRIEVAL_RUNTIME,ENUM,False,True,QGATE,NOT_FILTERED,False,NEVER_EMBED,QGate-owned values: PASS | WARNING | POLICY_REVIEW | REVIEW | null
+quality.quality_warnings,E_RETRIEVAL_RUNTIME,STRING_LIST,False,False,QGATE,JSON_AUXILIARY,False,NEVER_EMBED,Human-readable QGate warning strings; informational only
+quality.has_review_content,E_RETRIEVAL_RUNTIME,BOOLEAN,True,False,QGATE,JSON_AUXILIARY,False,NEVER_EMBED,True if any Cleaner REVIEW decision lies within the chunk's provenance range
+quality.review_rule_ids,E_RETRIEVAL_RUNTIME,STRING_LIST,False,False,QGATE,JSON_AUXILIARY,False,NEVER_EMBED,Opaque identifiers of rules that fired REVIEW within this chunk's provenance
+extras,E_RETRIEVAL_RUNTIME,OBJECT,True,False,DERIVED_DETERMINISTIC,NOT_FILTERED,False,NEVER_EMBED,Strict schema enforcement: MUST be empty dict. Unknown extra fields rejected (INV12)

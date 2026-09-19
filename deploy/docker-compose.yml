@@ -1,0 +1,163 @@
+# =============================================================================
+# 教学说明：本文件在整体链路中的位置
+# -----------------------------------------------------------------------------
+# 输入：运维本机已安装 Docker Desktop / Engine；可选合并 docker-daemon-cn.json。
+# 输出：`docker compose up -d` 起基础设施（redis/etcd/minio/milvus）；
+#       `docker compose --profile app up -d` 追加应用层（backend + frontend）；
+#       `docker compose --profile app-gpu up -d` GPU 版后端（需 nvidia-container-toolkit）。
+# 被谁调用：人工在 deploy/ 目录执行 compose；应用容器经 compose 网络互访，
+#           宿主小皮 MySQL 经 host.docker.internal 访问（需 xiaoyi@'%' 授权，见 README Docker 节）。
+# =============================================================================
+# Redis + Milvus（standalone）本地依赖 + 应用层（Task 21 Part 4）。
+#
+# 镜像说明：
+# - redis / minio / milvus 使用 DaoCloud 同步的 docker.io 命名空间，减轻 registry-1.docker.io EOF。
+# - etcd 必须用 quay.io（DaoCloud 不支持把 quay 路径拼在 docker.m.daocloud.io 后面，会报 invalid repository）。
+#   拉 quay 需能访问 quay.io；网络受限时可换可用环境后执行 docker compose pull。
+#
+# Profile 划分（Task 21）：
+# - 默认（infra）：redis / etcd / minio / standalone —— 与原行为一致，裸机应用不受影响
+# - app：backend（CPU torch）+ frontend（nginx）
+# - app-gpu：backend-gpu（CUDA torch）+ frontend —— 需 nvidia-container-toolkit（F4 已验证可用）
+#
+# MySQL 使用小皮本地实例时，请勿映射 3306 端口以免冲突。
+# 容器访问宿主 MySQL 需一次性授权（phpMyAdmin 以 root 执行）：
+#   CREATE USER IF NOT EXISTS 'xiaoyi'@'%' IDENTIFIED BY '<你的密码>';
+#   GRANT ALL PRIVILEGES ON `xiaoyi_rag`.* TO 'xiaoyi'@'%';
+#   FLUSH PRIVILEGES;
+
+services:
+  redis:
+    # DaoCloud 同步的 Docker Hub library/redis
+    image: docker.m.daocloud.io/library/redis:7-alpine
+    container_name: xiaoyi-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+
+  etcd:
+    container_name: milvus-etcd
+    # 官方镜像在 quay.io；勿使用 docker.m.daocloud.io/quay.io/...（DaoCloud 会拒识该仓库路径）
+    image: quay.io/coreos/etcd:v3.5.5
+    environment:
+      - ETCD_AUTO_COMPACTION_MODE=revision
+      - ETCD_AUTO_COMPACTION_RETENTION=1000
+      - ETCD_QUOTA_BACKEND_BYTES=4294967296
+      - ETCD_SNAPSHOT_COUNT=50000
+    volumes:
+      - etcd-data:/etcd
+    command: etcd -advertise-client-urls=http://127.0.0.1:2379 -listen-client-urls http://0.0.0.0:2379 --data-dir /etcd
+
+  minio:
+    container_name: milvus-minio
+    image: docker.m.daocloud.io/minio/minio:RELEASE.2023-03-20T20-16-18Z
+    environment:
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+    volumes:
+      - minio-data:/minio_data
+    command: minio server /minio_data
+
+  standalone:
+    container_name: milvus-standalone
+    image: docker.m.daocloud.io/milvusdb/milvus:v2.4.6
+    command: ["milvus", "run", "standalone"]
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      ETCD_ENDPOINTS: etcd:2379
+      MINIO_ADDRESS: minio:9000
+    volumes:
+      - milvus-data:/var/lib/milvus
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    depends_on:
+      - etcd
+      - minio
+
+  # =========================================================================
+  # 应用层（Task 21 Part 4）：profile app / app-gpu
+  # =========================================================================
+  backend:
+    profiles: ["app"]
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.backend
+      args:
+        TORCH_INDEX: https://download.pytorch.org/whl/cpu  # CPU wheel 控体积
+    container_name: xiaoyi-backend
+    env_file:
+      - ../.env  # 配置注入（.env 不进镜像，红线）
+    environment:
+      # 容器网络重定向：覆盖 .env 的裸机默认值（.env 文件本身零改动）
+      MILVUS_HOST: standalone          # compose 服务名（F2：Milvus 服务名为 standalone）
+      REDIS_URL: redis://redis:6379/0  # compose 服务名
+      MYSQL_HOST: host.docker.internal # 宿主小皮 MySQL 经 Docker Desktop 网关
+      RERANK_DEVICE: cpu               # CPU 镜像 torch 无 CUDA；GPU 走 backend-gpu
+    volumes:
+      - ../models:/app/models  # 权重 volume 挂载（不进镜像，红线）
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - standalone
+    networks:
+      default:
+        aliases:
+          - backend  # nginx 反代名恒定（与 backend-gpu 二选一运行，别名不冲突）
+    restart: unless-stopped
+
+  backend-gpu:
+    profiles: ["app-gpu"]
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.backend
+      args:
+        TORCH_INDEX: https://download.pytorch.org/whl/cu121  # CUDA wheel（构建较慢，按需）
+    container_name: xiaoyi-backend-gpu
+    env_file:
+      - ../.env
+    environment:
+      MILVUS_HOST: standalone
+      REDIS_URL: redis://redis:6379/0
+      MYSQL_HOST: host.docker.internal
+      RERANK_DEVICE: cuda             # 与生产 Config C 一致（GPU FP16）
+    volumes:
+      - ../models:/app/models
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - standalone
+    networks:
+      default:
+        aliases:
+          - backend  # 同上：nginx 无需区分 CPU/GPU 变体
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  frontend:
+    profiles: ["app", "app-gpu"]
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: xiaoyi-frontend
+    ports:
+      - "8080:80"  # 裸机 dev 是 5173；容器生产入口 8080
+    # 不设 depends_on：CPU/GPU 后端变体按 profile 二选一，nginx 反代名恒为 backend
+    restart: unless-stopped
+
+volumes:
+  redis-data:
+  etcd-data:
+  minio-data:
+  milvus-data:

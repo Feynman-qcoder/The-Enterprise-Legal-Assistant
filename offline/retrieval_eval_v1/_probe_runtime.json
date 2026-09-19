@@ -1,0 +1,76 @@
+{
+  "probe_version": "1.0",
+  "paths": {
+    "CANON_A": {
+      "path": "F:\\DataBase\\trae_work\\RAG_小号\\chunking_strategy_v2\\strategy_a_chunks.json",
+      "exists": true,
+      "nonempty": true,
+      "count": 1849
+    },
+    "CANON_B": {
+      "path": "F:\\DataBase\\trae_work\\RAG_小号\\chunking_strategy_v2\\strategy_b_chunks.json",
+      "exists": true,
+      "nonempty": true,
+      "count": 4145
+    },
+    "SYN_DOCX": {
+      "path": "D:\\xiaoyi\\data_source\\real_contract",
+      "count": 10,
+      "files": [
+        "SYN_CONTRACT_001_DATA_PROC.docx",
+        "SYN_CONTRACT_002_DATA_PROC.docx",
+        "SYN_CONTRACT_003_DATA_AGENCY.docx",
+        "SYN_CONTRACT_004_DATA_AGENCY.docx",
+        "SYN_CONTRACT_005_PROC_MAT.docx",
+        "SYN_CONTRACT_006_PROC_MAT.docx",
+        "SYN_CONTRACT_007_SALE_AGRI.docx",
+        "SYN_CONTRACT_008_LEASE.docx",
+        "SYN_CONTRACT_009_EPC.docx",
+        "SYN_CONTRACT_010_ENTRUST.docx"
+      ]
+    },
+    "SYN_FACTS": {
+      "path": "D:\\xiaoyi\\data_source\\real_contract\\synthetic_contract_facts.jsonl",
+      "exists": true,
+      "rows": 10
+    },
+    "LEGAL_EVAL": {
+      "path": "D:\\xiaoyi\\data_source\\_meta\\legal_eval_v1.jsonl",
+      "exists": true,
+      "rows": 60
+    },
+    "MANIFEST": {
+      "path": "D:\\xiaoyi\\data_source\\_meta\\ingest_manifest_v1.jsonl",
+      "exists": true,
+      "rows": 53
+    },
+    "LS_DIR": {
+      "path": "D:\\xiaoyi\\Legal_System",
+      "exists": true
+    }
+  },
+  "embedding_probe": {
+    "model_path_exists": true,
+    "model_path_resolved": "D:\\xiaoyi\\Legal_System\\models\\bge-m3",
+    "stop_reason": null,
+    "ping_ok": true,
+    "dimension": 1024,
+    "error": null
+  },
+  "forbidden_modules_snapshot": {
+    "modules.milvus_store": false,
+    "modules.database": false,
+    "modules.cache": false,
+    "modules.rerank": false,
+    "modules.rag.hybrid_rrf": false,
+    "pymilvus": false
+  },
+  "CANON_A_NONEMPTY": true,
+  "CANON_B_NONEMPTY": true,
+  "SYN_DOCX_COUNT": 10,
+  "SYN_FACTS_ROWS": 10,
+  "LEGAL_EVAL_ROWS": 60,
+  "EMB_MODEL_PATH_EXISTS": true,
+  "EMB_MODEL_PATH_MISSING": false,
+  "STOP_REASON": ""
+}
