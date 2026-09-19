@@ -36,6 +36,7 @@ Redis、Milvus、BGE-M3、BGE-Reranker 和 DashScope LLM，提供混合检索、
 - **私有化部署**：AutoDL + vLLM 自托管 Qwen3.8-27B-FP8，**业务代码零改动**（§4.5）
 
 **部分效果展示**
+多模态、引用核查边界、意图识别，更多图片查看docs
 <img width="1076" height="549" alt="多模态" src="https://github.com/user-attachments/assets/bf590426-632b-4ee4-8577-df223d31d7db" />
 <img width="1081" height="706" alt="引用核查边界" src="https://github.com/user-attachments/assets/4149f2e1-315f-414e-b501-29e55bb3baa0" />
 <img width="1089" height="340" alt="意图识别" src="https://github.com/user-attachments/assets/c822f372-8e8f-4d4f-8997-28c1cbd25791" />
