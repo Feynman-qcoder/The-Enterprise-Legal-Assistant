@@ -567,6 +567,26 @@ docker compose -f deploy/docker-compose.yml --profile app --profile app-gpu down
 
 ---
 
+## 五、后续优化方向
+
+> 以下为规划中的能力与方向，**当前版本尚未实现**。
+
+### 5.1 企业级能力
+
+| 方向 | 技术实现手段 |
+|---|---|
+| **文档级权限** | `users` / `groups` / `docs` ACL 三张表 → 检索期生成 Milvus 过滤表达式（`doc_id in [...]`）→ 与现有 `corpus_scope` 白名单叠加（两重过滤） |
+| **访问审计** | `audit` 表（user / question / 召回的 doc_ids / 时间戳）+ FastAPI 中间件埋点 |
+| **多租户** | Milvus partition + MySQL 行级 `tenant_id` 过滤 |
+
+### 5.2 任务化（从问答升维到 Agent）
+
+| 方向 | 技术实现手段 |
+|---|---|
+| **合同审查工作流** | 标准条款库（结构化）→ 逐条比对（LLM + 规则混合）→ 风险清单（结构化输出）→ 人工确认。用 LangGraph 状态机 + 工具调用承载；高风险动作进入审批流，不直接执行 |
+
+---
+
 完整文档索引见 [`docs/README.md`](docs/README.md)。
 
 有何问题欢迎留言指正。
