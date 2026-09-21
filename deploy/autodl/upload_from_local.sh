@@ -12,7 +12,7 @@
 #   bash deploy/autodl/upload_from_local.sh <host> <port> [remote_root]
 #
 # 例：
-#   bash deploy/autodl/upload_from_local.sh connect.westd.seetacloud.com 34857
+#   bash deploy/autodl/upload_from_local.sh <host> <port>
 #   # 默认上传到 /root/autodl-tmp/Legal_System
 #
 # 提示：AutoDL 的**系统盘只有 30GB**，装不下 venv+模型，
