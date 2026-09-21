@@ -328,7 +328,7 @@ f670c99  chore(deploy): snapshot before AutoDL private-deployment trial   ← ta
 
 | 项 | 值 |
 |---|---|
-| SSH 别名 | `autodl-e48`（`connect.weste.seetacloud.com:33245`） |
+| SSH 别名 | 自定义别名（写入本地 `~/.ssh/config`），实际地址形如 `connect.<区域>.seetacloud.com:<端口>` |
 | 仓库位置 | **必须** `/root/autodl-tmp/Legal_System`（`/root` 属 30GB 系统盘） |
 | Python | `/root/miniconda3/bin/python` 3.12.3（非登录 shell 不加载 PATH，需 `bash -lc`） |
 | venv | `.venv`（应用，661M，继承 base torch）/ `.venv-vllm`（8.0G，vLLM 0.29.0） |
